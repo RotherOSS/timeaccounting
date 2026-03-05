@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TimeAccounting\n"
-"POT-Creation-Date: 2020-01-24 14:51+0000\n"
+"POT-Creation-Date: 2024-05-25 17:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -75,7 +75,15 @@ msgid "Remark"
 msgstr ""
 
 #. Template: AgentTimeAccountingEdit
+msgid "Origin"
+msgstr ""
+
+#. Template: AgentTimeAccountingEdit
 msgid "Please add a remark with more than 8 characters!"
+msgstr ""
+
+#. Template: AgentTimeAccountingEdit
+msgid "Ursprung"
 msgstr ""
 
 #. Template: AgentTimeAccountingEdit
@@ -116,6 +124,10 @@ msgstr ""
 
 #. Template: AgentTimeAccountingEdit
 msgid "Invalid period! Negative periods are not allowed."
+msgstr ""
+
+#. Template: AgentTimeAccountingEdit
+msgid "Submit changes"
 msgstr ""
 
 #. Template: AgentTimeAccountingEdit
@@ -623,7 +635,19 @@ msgid "Confirm insert"
 msgstr ""
 
 #. SysConfig
+msgid "Activate the synchronisation of Ticket-TimeUnits into the TimeAccounting module."
+msgstr ""
+
+#. SysConfig
 msgid "Agent interface notification module to see the number of incomplete working days for the user."
+msgstr ""
+
+#. SysConfig
+msgid "Also synchronise customers as a new project if they have not yet been created in the customer database."
+msgstr ""
+
+#. SysConfig
+msgid "As soon as the synchronisation of ticket TimeUnits is activated, it is possible to set the entries ReadOnly."
 msgstr ""
 
 #. SysConfig
@@ -687,6 +711,10 @@ msgid "Edit time record."
 msgstr ""
 
 #. SysConfig
+msgid "Every time a agent add TimeUnits to a ticket, we sync the information to the timeaccounting module."
+msgstr ""
+
+#. SysConfig
 msgid "For how many days ago you can insert working units."
 msgstr ""
 
@@ -739,6 +767,10 @@ msgid "Specifies if working hours can be inserted without start and end times."
 msgstr ""
 
 #. SysConfig
+msgid "Synchronise customers as a new project if they exists in the customer database."
+msgstr ""
+
+#. SysConfig
 msgid "This module forces inserts in TimeAccounting."
 msgstr ""
 
@@ -776,38 +808,6 @@ msgstr ""
 
 #. SysConfig
 msgid "To use if some actions reduced the working hours (for example, if only half of the traveling time is paid Key => traveling; Content => 50)."
-msgstr ""
-
-#. Template: AgentTimeAccountingEdit
-msgid "Origin"
-msgstr ""
-
-#. Template: AgentTimeAccountingEdit
-msgid "Ursprung"
-msgstr ""
-
-#. Template: AgentTimeAccountingEdit
-msgid "Submit changes"
-msgstr ""
-
-#. SysConfig
-msgid "Activate the synchronisation of Ticket-TimeUnits into the TimeAccounting module."
-msgstr ""
-
-#. SysConfig
-msgid "Also synchronise customers as a new project if they have not yet been created in the customer database."
-msgstr ""
-
-#. SysConfig
-msgid "As soon as the synchronisation of ticket TimeUnits is activated, it is possible to set the entries ReadOnly."
-msgstr ""
-
-#. SysConfig
-msgid "Every time a agent add TimeUnits to a ticket, we sync the information to the timeaccounting module."
-msgstr ""
-
-#. SysConfig
-msgid "Synchronise customers as a new project if they exists in the customer database."
 msgstr ""
 
 #. SysConfig
