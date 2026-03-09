@@ -2,7 +2,7 @@
 # OTOBO is a web-based ticketing system for service organisations.
 # --
 # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
-# Copyright (C) 2019-2024 Rother OSS GmbH, https://otobo.io/
+# Copyright (C) 2019-2026 Rother OSS GmbH, https://otobo.io/
 # --
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -23,6 +23,18 @@ use utf8;
 sub Data {
     my $Self = shift;
 
+    # Template: AgentTicketAccountTime
+    $Self->{Translation}->{'Add Time Accounting'} = 'Zeit buchen';
+    $Self->{Translation}->{'The date must be valid and not later than today!'} = 'Das Datum muss gültig sein und darf nicht in der Vergangenheit liegen!';
+    $Self->{Translation}->{'Task'} = 'Tätigkeit';
+    $Self->{Translation}->{'Remark'} = 'Anmerkung';
+    $Self->{Translation}->{'Start time'} = 'Startzeitpunkt';
+    $Self->{Translation}->{'End time'} = 'Endzeitpunkt';
+    $Self->{Translation}->{'You must enter a start and an end time, or a positive period of up to 24 hours.'} =
+        'Es muss ein Start- und Endzeitpunkt eingegeben werden oder ein Zeitraum von bis zu 24 Stunden.';
+    $Self->{Translation}->{'The time period must be given in hours and can be a decimal number.'} =
+        'Die Zeitperiode muss in Stunden angegeben werden und kann eine Kommazahl sein.';
+
     # Template: AgentTimeAccountingDelete
     $Self->{Translation}->{'Do you really want to delete the Time Accounting of this day?'} =
         'Möchten Sie die erfasste Zeit für den aktuellen Tag löschen?';
@@ -42,8 +54,6 @@ sub Data {
     $Self->{Translation}->{'Required fields are marked with a "*".'} = 'Pflichtfelder sind mit einem Stern "*" gekennzeichnet.';
     $Self->{Translation}->{'You have to fill in start and end time or a time period.'} = 'Sie müssen eine Start- und Endzeit oder eine Zeitspanne angeben.';
     $Self->{Translation}->{'Project'} = 'Projekt';
-    $Self->{Translation}->{'Task'} = 'Tätigkeit';
-    $Self->{Translation}->{'Remark'} = 'Anmerkung';
     $Self->{Translation}->{'Origin'} = '';
     $Self->{Translation}->{'Please add a remark with more than 8 characters!'} = 'Bitte geben Sie eine Anmerkung von mehr als 8 Zeichen Länge ein!';
     $Self->{Translation}->{'Ursprung'} = '';
@@ -112,6 +122,10 @@ sub Data {
     $Self->{Translation}->{'Currently all time accounting users are shown. To change this behavior, please update setting:'} =
         'Derzeit werden alle zeiterfassenden Benutzer angezeigt. Um diese Einstellung zu ändern, bearbeiten Sie bitte:';
 
+    # Template: AgentTimeAccountingReportingTicket
+    $Self->{Translation}->{'Ticket report'} = 'Ticketübersicht';
+    $Self->{Translation}->{'Go to ticket'} = 'Zum Ticket wechseln';
+
     # Template: AgentTimeAccountingSetting
     $Self->{Translation}->{'Edit Time Accounting Project Settings'} = 'Zeiterfassung-Projekteinstellungen bearbeiten';
     $Self->{Translation}->{'Add project'} = 'Projekt hinzufügen';
@@ -166,21 +180,6 @@ sub Data {
     $Self->{Translation}->{'Next day'} = 'Nächster Tag';
     $Self->{Translation}->{'No data found for this day.'} = 'Kein Eintrag für diesen Tag gefunden.';
 
-    # Template: AgentTimeAccountingReportingTicket
-    $Self->{Translation}->{'Time Report'} = 'Zeitübersicht';
-    $Self->{Translation}->{'Show accounted times for this ticket'} = 'Auf dieses Ticket gebuchte Zeitangaben anzeigen';
-    $Self->{Translation}->{'Ticket report'} = 'Ticketübersicht';
-    $Self->{Translation}->{'Go to ticket'} = 'Zum Ticket wechseln';
-
-    # Template: AgentTicketAccountTime
-    $Self->{Translation}->{'Create a new time accounting entry related to the ticket'} = 'Zeiteinheiten auf dieses Ticket buchen';
-    $Self->{Translation}->{'Add Time Accounting'} = 'Zeit buchen';
-    $Self->{Translation}->{'The date must be valid and not later than today!'} = 'Das Datum muss gültig sein und darf nicht in der Vergangenheit liegen!';
-    $Self->{Translation}->{'Start time'} = 'Startzeitpunkt';
-    $Self->{Translation}->{'End time'} = 'Endzeitpunkt';
-    $Self->{Translation}->{'The time period must be given in hours and can be a decimal number.'} = 'Die Zeitperiode muss in Stunden angegeben werden und kann eine Kommazahl sein.';
-    $Self->{Translation}->{'You must enter a start and an end time, or a positive period of up to 24 hours.'} = 'Es muss ein Start- und Endzeitpunkt eingegeben werden oder ein Zeitraum von bis zu 24 Stunden.';
-
     # Perl Module: Kernel/Modules/AgentTimeAccountingEdit.pm
     $Self->{Translation}->{'Can\'t insert Working Units!'} = 'Kann Arbeitseinheiten nicht einfügen!';
     $Self->{Translation}->{'Last Projects'} = 'Letzte Projekte';
@@ -204,6 +203,10 @@ sub Data {
     $Self->{Translation}->{'ReportingProject: Need ProjectID'} = 'Berichtsprojekt: Benötige ProjectID';
     $Self->{Translation}->{'Reporting Project'} = 'Berichtsprojekt';
     $Self->{Translation}->{'Reporting'} = 'Berichte';
+
+    # Perl Module: Kernel/Modules/AgentTimeAccountingReportingTicket.pm
+    $Self->{Translation}->{'ReportingProject: Need TicketID'} = '';
+    $Self->{Translation}->{'ReportingProject: No Project for Ticket found.'} = '';
 
     # Perl Module: Kernel/Modules/AgentTimeAccountingSetting.pm
     $Self->{Translation}->{'Unable to update user settings!'} = 'Benutzereinstellungen können nicht aktualisiert werden!';
@@ -247,6 +250,7 @@ sub Data {
         '';
     $Self->{Translation}->{'As soon as the synchronisation of ticket TimeUnits is activated, it is possible to set the entries ReadOnly.'} =
         '';
+    $Self->{Translation}->{'Create a new time accounting entry related to the ticket'} = 'Zeiteinheiten auf dieses Ticket buchen';
     $Self->{Translation}->{'Default name for new actions.'} = 'Standardname für neue Tätigkeiten.';
     $Self->{Translation}->{'Default name for new projects.'} = 'Anfangsstatus eines neuen Projekts.';
     $Self->{Translation}->{'Default setting for date end.'} = 'Standardeinstellung für Enddatum.';
@@ -287,6 +291,7 @@ sub Data {
         'Regulärer Ausdruck, um die Liste der Tätigkeiten bezüglich des ausgewählten Projekts einzuschränken. Der Schlüssel enthält einen Regulären Ausdruck für Projekte, der Wert einen Regulären Ausdruck für die Tätigkeiten.';
     $Self->{Translation}->{'Regular expressions for constraining project list according to user groups. Key contains regular expression for project(s), content contains comma separated list of groups.'} =
         'Regulärer Ausdruck, um die Liste der Projekte bezüglich des aktiven Benutzers einzuschränken. Der Schlüssel enthält einen Regulären Ausdruck für Projekte, der Wert enthält eine komma-separierte Liste von Benutzergruppen.';
+    $Self->{Translation}->{'Show accounted times for this ticket'} = 'Auf dieses Ticket gebuchte Zeitangaben anzeigen';
     $Self->{Translation}->{'Specifies if working hours can be inserted without start and end times.'} =
         'Gibt an, ob Arbeitsstunden ohne Start- und Endzeit eingegeben werden können.';
     $Self->{Translation}->{'Synchronise customers as a new project if they exists in the customer database.'} =
@@ -294,11 +299,14 @@ sub Data {
     $Self->{Translation}->{'This module forces inserts in TimeAccounting.'} = 'Dieses Modul zwingt zur Eingabe von Stunden.';
     $Self->{Translation}->{'This notification module gives a warning if there are too many incomplete working days.'} =
         'Modul, dass den Agent im Notification-Bereich des Agent-Interfaces darüber informiert, wenn schon zu lange keine Stunden mehr eingetragen wurden.';
+    $Self->{Translation}->{'Ticket time report'} = '';
     $Self->{Translation}->{'Time Accounting'} = 'Zeiterfassung';
+    $Self->{Translation}->{'Time Report'} = 'Zeitübersicht';
     $Self->{Translation}->{'Time accounting edit.'} = 'Zeiterfassung Bearbeitung.';
     $Self->{Translation}->{'Time accounting overview.'} = 'Zeiterfassungsübersicht.';
     $Self->{Translation}->{'Time accounting reporting.'} = 'Zeiterfassung Berichterstattung.';
     $Self->{Translation}->{'Time accounting settings.'} = 'Zeiterfassung Einstellungen.';
+    $Self->{Translation}->{'Time accounting ticket report.'} = '';
     $Self->{Translation}->{'Time accounting view.'} = 'Zeiterfassung Ansicht.';
     $Self->{Translation}->{'Time accounting.'} = 'Zeiterfassung.';
     $Self->{Translation}->{'To use if some actions reduced the working hours (for example, if only half of the traveling time is paid Key => traveling; Content => 50).'} =

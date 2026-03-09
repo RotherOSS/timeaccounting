@@ -2,7 +2,7 @@
 # OTOBO is a web-based ticketing system for service organisations.
 # --
 # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
-# Copyright (C) 2019-2024 Rother OSS GmbH, https://otobo.io/
+# Copyright (C) 2019-2026 Rother OSS GmbH, https://otobo.io/
 # --
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -23,6 +23,18 @@ use utf8;
 sub Data {
     my $Self = shift;
 
+    # Template: AgentTicketAccountTime
+    $Self->{Translation}->{'Add Time Accounting'} = '';
+    $Self->{Translation}->{'The date must be valid and not later than today!'} = '';
+    $Self->{Translation}->{'Task'} = '任务';
+    $Self->{Translation}->{'Remark'} = '备注';
+    $Self->{Translation}->{'Start time'} = '';
+    $Self->{Translation}->{'End time'} = '';
+    $Self->{Translation}->{'You must enter a start and an end time, or a positive period of up to 24 hours.'} =
+        '';
+    $Self->{Translation}->{'The time period must be given in hours and can be a decimal number.'} =
+        '';
+
     # Template: AgentTimeAccountingDelete
     $Self->{Translation}->{'Do you really want to delete the Time Accounting of this day?'} =
         '请确认你真的希望删除这一天的工时管理记录？';
@@ -42,8 +54,6 @@ sub Data {
     $Self->{Translation}->{'Required fields are marked with a "*".'} = '标记"*"的字段为必填。';
     $Self->{Translation}->{'You have to fill in start and end time or a time period.'} = '你需要填写开始和结束时间或者时间段。';
     $Self->{Translation}->{'Project'} = '项目';
-    $Self->{Translation}->{'Task'} = '任务';
-    $Self->{Translation}->{'Remark'} = '备注';
     $Self->{Translation}->{'Origin'} = '';
     $Self->{Translation}->{'Please add a remark with more than 8 characters!'} = '请添加一个超过8个字符的备注！';
     $Self->{Translation}->{'Ursprung'} = '';
@@ -111,6 +121,10 @@ sub Data {
         '当前仅显示项目中的激活用户。如要调整显示属性，请更新设置：';
     $Self->{Translation}->{'Currently all time accounting users are shown. To change this behavior, please update setting:'} =
         '当前显示所有的工时管理用户。如要调整显示属性，请更新设置：';
+
+    # Template: AgentTimeAccountingReportingTicket
+    $Self->{Translation}->{'Ticket report'} = '';
+    $Self->{Translation}->{'Go to ticket'} = '';
 
     # Template: AgentTimeAccountingSetting
     $Self->{Translation}->{'Edit Time Accounting Project Settings'} = '编辑工时管理项目设置';
@@ -190,6 +204,10 @@ sub Data {
     $Self->{Translation}->{'Reporting Project'} = '项目报告';
     $Self->{Translation}->{'Reporting'} = '报告';
 
+    # Perl Module: Kernel/Modules/AgentTimeAccountingReportingTicket.pm
+    $Self->{Translation}->{'ReportingProject: Need TicketID'} = '';
+    $Self->{Translation}->{'ReportingProject: No Project for Ticket found.'} = '';
+
     # Perl Module: Kernel/Modules/AgentTimeAccountingSetting.pm
     $Self->{Translation}->{'Unable to update user settings!'} = '无法更新用户设置！';
     $Self->{Translation}->{'Project added!'} = '项目已添加！';
@@ -232,6 +250,7 @@ sub Data {
         '';
     $Self->{Translation}->{'As soon as the synchronisation of ticket TimeUnits is activated, it is possible to set the entries ReadOnly.'} =
         '';
+    $Self->{Translation}->{'Create a new time accounting entry related to the ticket'} = '';
     $Self->{Translation}->{'Default name for new actions.'} = '新活动的默认名称。';
     $Self->{Translation}->{'Default name for new projects.'} = '新项目的默认名称。';
     $Self->{Translation}->{'Default setting for date end.'} = '结束日期的默认设置。';
@@ -272,6 +291,7 @@ sub Data {
         '选定项目的限制活动清单使用的正则表达式。键包含了项目（Projects）的正则表达式，值包含了活动（Action）的正则表达式。';
     $Self->{Translation}->{'Regular expressions for constraining project list according to user groups. Key contains regular expression for project(s), content contains comma separated list of groups.'} =
         '用户组的限制项目清单使用的正则表达式。Key包含了项目（Projects）的正则表达式，Content包含了逗号分隔的组清单。';
+    $Self->{Translation}->{'Show accounted times for this ticket'} = '';
     $Self->{Translation}->{'Specifies if working hours can be inserted without start and end times.'} =
         '指定在没有开始和结束时间的情况下是否可以插入工时数据。';
     $Self->{Translation}->{'Synchronise customers as a new project if they exists in the customer database.'} =
@@ -279,11 +299,14 @@ sub Data {
     $Self->{Translation}->{'This module forces inserts in TimeAccounting.'} = '本模块功能插入到工时管理中。';
     $Self->{Translation}->{'This notification module gives a warning if there are too many incomplete working days.'} =
         '如有有太多不完整的工日，该通知模块会发出告警。';
+    $Self->{Translation}->{'Ticket time report'} = '';
     $Self->{Translation}->{'Time Accounting'} = '工时管理';
+    $Self->{Translation}->{'Time Report'} = '';
     $Self->{Translation}->{'Time accounting edit.'} = '工时管理编辑。';
     $Self->{Translation}->{'Time accounting overview.'} = '工时管理概览。';
     $Self->{Translation}->{'Time accounting reporting.'} = '工时管理报告。';
     $Self->{Translation}->{'Time accounting settings.'} = '工时管理设置。';
+    $Self->{Translation}->{'Time accounting ticket report.'} = '';
     $Self->{Translation}->{'Time accounting view.'} = '工时管理查看。';
     $Self->{Translation}->{'Time accounting.'} = '工时管理。';
     $Self->{Translation}->{'To use if some actions reduced the working hours (for example, if only half of the traveling time is paid Key => traveling; Content => 50).'} =

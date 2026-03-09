@@ -2,7 +2,7 @@
 # OTOBO is a web-based ticketing system for service organisations.
 # --
 # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
-# Copyright (C) 2019-2024 Rother OSS GmbH, https://otobo.io/
+# Copyright (C) 2019-2026 Rother OSS GmbH, https://otobo.io/
 # --
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -23,6 +23,18 @@ use utf8;
 sub Data {
     my $Self = shift;
 
+    # Template: AgentTicketAccountTime
+    $Self->{Translation}->{'Add Time Accounting'} = '';
+    $Self->{Translation}->{'The date must be valid and not later than today!'} = '';
+    $Self->{Translation}->{'Task'} = 'Opgave';
+    $Self->{Translation}->{'Remark'} = 'Bemærkning';
+    $Self->{Translation}->{'Start time'} = '';
+    $Self->{Translation}->{'End time'} = '';
+    $Self->{Translation}->{'You must enter a start and an end time, or a positive period of up to 24 hours.'} =
+        '';
+    $Self->{Translation}->{'The time period must be given in hours and can be a decimal number.'} =
+        '';
+
     # Template: AgentTimeAccountingDelete
     $Self->{Translation}->{'Do you really want to delete the Time Accounting of this day?'} =
         'Vil du virkelig slette tidsregnskabet for denne dag?';
@@ -42,8 +54,6 @@ sub Data {
     $Self->{Translation}->{'Required fields are marked with a "*".'} = 'De påkrævede felter er markeret med "*".';
     $Self->{Translation}->{'You have to fill in start and end time or a time period.'} = 'Du skal indtaste en start- og slutdato eller en tidsperiode.';
     $Self->{Translation}->{'Project'} = 'Projekt';
-    $Self->{Translation}->{'Task'} = 'Opgave';
-    $Self->{Translation}->{'Remark'} = 'Bemærkning';
     $Self->{Translation}->{'Origin'} = '';
     $Self->{Translation}->{'Please add a remark with more than 8 characters!'} = '';
     $Self->{Translation}->{'Ursprung'} = '';
@@ -111,6 +121,10 @@ sub Data {
         '';
     $Self->{Translation}->{'Currently all time accounting users are shown. To change this behavior, please update setting:'} =
         '';
+
+    # Template: AgentTimeAccountingReportingTicket
+    $Self->{Translation}->{'Ticket report'} = '';
+    $Self->{Translation}->{'Go to ticket'} = '';
 
     # Template: AgentTimeAccountingSetting
     $Self->{Translation}->{'Edit Time Accounting Project Settings'} = 'Rediger indstillinger for tidsregnskabsprojekt';
@@ -190,6 +204,10 @@ sub Data {
     $Self->{Translation}->{'Reporting Project'} = '';
     $Self->{Translation}->{'Reporting'} = 'Reportering';
 
+    # Perl Module: Kernel/Modules/AgentTimeAccountingReportingTicket.pm
+    $Self->{Translation}->{'ReportingProject: Need TicketID'} = '';
+    $Self->{Translation}->{'ReportingProject: No Project for Ticket found.'} = '';
+
     # Perl Module: Kernel/Modules/AgentTimeAccountingSetting.pm
     $Self->{Translation}->{'Unable to update user settings!'} = '';
     $Self->{Translation}->{'Project added!'} = '';
@@ -232,6 +250,7 @@ sub Data {
         '';
     $Self->{Translation}->{'As soon as the synchronisation of ticket TimeUnits is activated, it is possible to set the entries ReadOnly.'} =
         '';
+    $Self->{Translation}->{'Create a new time accounting entry related to the ticket'} = '';
     $Self->{Translation}->{'Default name for new actions.'} = 'Standardnavn for nye handlinger.';
     $Self->{Translation}->{'Default name for new projects.'} = 'Standardnavn for nye projekter.';
     $Self->{Translation}->{'Default setting for date end.'} = 'Standardindstilling for slutdato.';
@@ -272,6 +291,7 @@ sub Data {
         'Regulære udtryk for begrænsning af handlingsliste ifølge det valgte projekt. Nøglen indeholder et regulært udtryk for projekt(er), indholdet rummer regulære udtryk for handling(er).';
     $Self->{Translation}->{'Regular expressions for constraining project list according to user groups. Key contains regular expression for project(s), content contains comma separated list of groups.'} =
         'Regulære udtryk for begrænsning af projektliste ifølge brugergrupper. Nøglen indeholder et regulært udtryk for projekt(er), indholdet rummer kommasepareret liste over grupper.';
+    $Self->{Translation}->{'Show accounted times for this ticket'} = '';
     $Self->{Translation}->{'Specifies if working hours can be inserted without start and end times.'} =
         'Angiver, om arbejdstimer kan indsættes uden start- og sluttider.';
     $Self->{Translation}->{'Synchronise customers as a new project if they exists in the customer database.'} =
@@ -279,11 +299,14 @@ sub Data {
     $Self->{Translation}->{'This module forces inserts in TimeAccounting.'} = 'Dette modul gennemtvinger indsættelser i tidsregnskab.';
     $Self->{Translation}->{'This notification module gives a warning if there are too many incomplete working days.'} =
         'Dette adviseringsmodul giver en advarsel, hvis der er for mange ufuldstændige arbejdsdage.';
+    $Self->{Translation}->{'Ticket time report'} = '';
     $Self->{Translation}->{'Time Accounting'} = '';
+    $Self->{Translation}->{'Time Report'} = '';
     $Self->{Translation}->{'Time accounting edit.'} = '';
     $Self->{Translation}->{'Time accounting overview.'} = '';
     $Self->{Translation}->{'Time accounting reporting.'} = '';
     $Self->{Translation}->{'Time accounting settings.'} = '';
+    $Self->{Translation}->{'Time accounting ticket report.'} = '';
     $Self->{Translation}->{'Time accounting view.'} = '';
     $Self->{Translation}->{'Time accounting.'} = 'Tidsregnskab';
     $Self->{Translation}->{'To use if some actions reduced the working hours (for example, if only half of the traveling time is paid Key => traveling; Content => 50).'} =

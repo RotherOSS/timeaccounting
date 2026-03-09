@@ -2,7 +2,7 @@
 # OTOBO is a web-based ticketing system for service organisations.
 # --
 # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
-# Copyright (C) 2019-2024 Rother OSS GmbH, https://otobo.io/
+# Copyright (C) 2019-2026 Rother OSS GmbH, https://otobo.io/
 # --
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -23,6 +23,18 @@ use utf8;
 sub Data {
     my $Self = shift;
 
+    # Template: AgentTicketAccountTime
+    $Self->{Translation}->{'Add Time Accounting'} = '';
+    $Self->{Translation}->{'The date must be valid and not later than today!'} = '';
+    $Self->{Translation}->{'Task'} = 'Tarefa';
+    $Self->{Translation}->{'Remark'} = 'Observación';
+    $Self->{Translation}->{'Start time'} = '';
+    $Self->{Translation}->{'End time'} = '';
+    $Self->{Translation}->{'You must enter a start and an end time, or a positive period of up to 24 hours.'} =
+        '';
+    $Self->{Translation}->{'The time period must be given in hours and can be a decimal number.'} =
+        '';
+
     # Template: AgentTimeAccountingDelete
     $Self->{Translation}->{'Do you really want to delete the Time Accounting of this day?'} =
         'Quere realmente borrar o Tempo Contabilizado deste día?';
@@ -42,8 +54,6 @@ sub Data {
     $Self->{Translation}->{'Required fields are marked with a "*".'} = 'Os campos obrigatorios están marcados cun «*».';
     $Self->{Translation}->{'You have to fill in start and end time or a time period.'} = 'Hai que dar unha hora de inicio e de remate ou un período de tempo.';
     $Self->{Translation}->{'Project'} = 'Proxecto';
-    $Self->{Translation}->{'Task'} = 'Tarefa';
-    $Self->{Translation}->{'Remark'} = 'Observación';
     $Self->{Translation}->{'Origin'} = '';
     $Self->{Translation}->{'Please add a remark with more than 8 characters!'} = '';
     $Self->{Translation}->{'Ursprung'} = '';
@@ -111,6 +121,10 @@ sub Data {
         'Actualmente só usuarios activos neste proxecto son mostrados. Para cambiar este comportamento, por favor actualice o axuste:';
     $Self->{Translation}->{'Currently all time accounting users are shown. To change this behavior, please update setting:'} =
         'Todo o tempo contabilizado polos usuarios é mostrado. Para cambiar este comportamento, por favor actulice o axuste:';
+
+    # Template: AgentTimeAccountingReportingTicket
+    $Self->{Translation}->{'Ticket report'} = '';
+    $Self->{Translation}->{'Go to ticket'} = '';
 
     # Template: AgentTimeAccountingSetting
     $Self->{Translation}->{'Edit Time Accounting Project Settings'} = 'Edite Contabilización do Tempo en Axustes de Proyecto';
@@ -190,6 +204,10 @@ sub Data {
     $Self->{Translation}->{'Reporting Project'} = '';
     $Self->{Translation}->{'Reporting'} = 'Informes';
 
+    # Perl Module: Kernel/Modules/AgentTimeAccountingReportingTicket.pm
+    $Self->{Translation}->{'ReportingProject: Need TicketID'} = '';
+    $Self->{Translation}->{'ReportingProject: No Project for Ticket found.'} = '';
+
     # Perl Module: Kernel/Modules/AgentTimeAccountingSetting.pm
     $Self->{Translation}->{'Unable to update user settings!'} = '';
     $Self->{Translation}->{'Project added!'} = '';
@@ -232,6 +250,7 @@ sub Data {
         '';
     $Self->{Translation}->{'As soon as the synchronisation of ticket TimeUnits is activated, it is possible to set the entries ReadOnly.'} =
         '';
+    $Self->{Translation}->{'Create a new time accounting entry related to the ticket'} = '';
     $Self->{Translation}->{'Default name for new actions.'} = 'Nome predeterminado para as accións novas.';
     $Self->{Translation}->{'Default name for new projects.'} = 'Nome predeterminado para os proxectos novos.';
     $Self->{Translation}->{'Default setting for date end.'} = 'Axuste por defecto para fin da data.';
@@ -272,6 +291,7 @@ sub Data {
         'Expresións regulares para a lista que contrinxe a acción segundo o proxecto seleccionado. Chave contén a expresión regular para proxecto(s), contido contén expresións regulares para acción(s).';
     $Self->{Translation}->{'Regular expressions for constraining project list according to user groups. Key contains regular expression for project(s), content contains comma separated list of groups.'} =
         'Expresións regulares para a lista que contrinxe o proxecto segundo os grupos seleccionados. Chave contén a expresión regular para proxecto(s), contido contén lista separada por comas de grupos.';
+    $Self->{Translation}->{'Show accounted times for this ticket'} = '';
     $Self->{Translation}->{'Specifies if working hours can be inserted without start and end times.'} =
         'Especifica se as horas de traballo poden ser insertadas sen tempos de inicio e fin.';
     $Self->{Translation}->{'Synchronise customers as a new project if they exists in the customer database.'} =
@@ -279,11 +299,14 @@ sub Data {
     $Self->{Translation}->{'This module forces inserts in TimeAccounting.'} = 'Este módulo forza as insercións en ContabilizaciónTempo.';
     $Self->{Translation}->{'This notification module gives a warning if there are too many incomplete working days.'} =
         'Este módulo de notificación da unha alerta se hai moitos días de traballo incompletos.';
+    $Self->{Translation}->{'Ticket time report'} = '';
     $Self->{Translation}->{'Time Accounting'} = 'Contabilizar Tempo';
+    $Self->{Translation}->{'Time Report'} = '';
     $Self->{Translation}->{'Time accounting edit.'} = 'Edite contabilización do tempo.';
     $Self->{Translation}->{'Time accounting overview.'} = 'Vista Xeral contabilización tempo.';
     $Self->{Translation}->{'Time accounting reporting.'} = 'Informe contabilización tempo.';
     $Self->{Translation}->{'Time accounting settings.'} = 'Axustes contabilización tempo.';
+    $Self->{Translation}->{'Time accounting ticket report.'} = '';
     $Self->{Translation}->{'Time accounting view.'} = 'Vista contabilización tempo.';
     $Self->{Translation}->{'Time accounting.'} = 'Contabilización tempo.';
     $Self->{Translation}->{'To use if some actions reduced the working hours (for example, if only half of the traveling time is paid Key => traveling; Content => 50).'} =

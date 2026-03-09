@@ -2,7 +2,7 @@
 # OTOBO is a web-based ticketing system for service organisations.
 # --
 # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
-# Copyright (C) 2019-2024 Rother OSS GmbH, https://otobo.io/
+# Copyright (C) 2019-2026 Rother OSS GmbH, https://otobo.io/
 # --
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -23,6 +23,18 @@ use utf8;
 sub Data {
     my $Self = shift;
 
+    # Template: AgentTicketAccountTime
+    $Self->{Translation}->{'Add Time Accounting'} = '';
+    $Self->{Translation}->{'The date must be valid and not later than today!'} = '';
+    $Self->{Translation}->{'Task'} = 'Задача';
+    $Self->{Translation}->{'Remark'} = 'Забележка';
+    $Self->{Translation}->{'Start time'} = '';
+    $Self->{Translation}->{'End time'} = '';
+    $Self->{Translation}->{'You must enter a start and an end time, or a positive period of up to 24 hours.'} =
+        '';
+    $Self->{Translation}->{'The time period must be given in hours and can be a decimal number.'} =
+        '';
+
     # Template: AgentTimeAccountingDelete
     $Self->{Translation}->{'Do you really want to delete the Time Accounting of this day?'} =
         'Наистина ли искате да изтриете счетоводството за време в този ден?';
@@ -42,8 +54,6 @@ sub Data {
     $Self->{Translation}->{'Required fields are marked with a "*".'} = 'Задължителните полета са маркирани с "*".';
     $Self->{Translation}->{'You have to fill in start and end time or a time period.'} = 'Трябва да въведете начално и крайно време или период от време.';
     $Self->{Translation}->{'Project'} = 'Проект';
-    $Self->{Translation}->{'Task'} = 'Задача';
-    $Self->{Translation}->{'Remark'} = 'Забележка';
     $Self->{Translation}->{'Origin'} = '';
     $Self->{Translation}->{'Please add a remark with more than 8 characters!'} = 'Моля, добавете забележка с повече от 8 знака!';
     $Self->{Translation}->{'Ursprung'} = '';
@@ -111,6 +121,10 @@ sub Data {
         'В момента се показват само активни потребители в този проект. За да промените това поведение, моля, актуализирайте настройката:';
     $Self->{Translation}->{'Currently all time accounting users are shown. To change this behavior, please update setting:'} =
         'Понастоящем се показват всички потребители, отчитащи времето. За да промените това поведение, моля, актуализирайте настройката:';
+
+    # Template: AgentTimeAccountingReportingTicket
+    $Self->{Translation}->{'Ticket report'} = '';
+    $Self->{Translation}->{'Go to ticket'} = '';
 
     # Template: AgentTimeAccountingSetting
     $Self->{Translation}->{'Edit Time Accounting Project Settings'} = 'Редактиране на настройките на проект за счетоводно време';
@@ -190,6 +204,10 @@ sub Data {
     $Self->{Translation}->{'Reporting Project'} = 'Проект за отчитане';
     $Self->{Translation}->{'Reporting'} = 'Отчетност';
 
+    # Perl Module: Kernel/Modules/AgentTimeAccountingReportingTicket.pm
+    $Self->{Translation}->{'ReportingProject: Need TicketID'} = '';
+    $Self->{Translation}->{'ReportingProject: No Project for Ticket found.'} = '';
+
     # Perl Module: Kernel/Modules/AgentTimeAccountingSetting.pm
     $Self->{Translation}->{'Unable to update user settings!'} = 'Не може да се актуализират потребителските настройки!';
     $Self->{Translation}->{'Project added!'} = 'Проектът е добавен!';
@@ -232,6 +250,7 @@ sub Data {
         '';
     $Self->{Translation}->{'As soon as the synchronisation of ticket TimeUnits is activated, it is possible to set the entries ReadOnly.'} =
         '';
+    $Self->{Translation}->{'Create a new time accounting entry related to the ticket'} = '';
     $Self->{Translation}->{'Default name for new actions.'} = 'Име по подразбиране за нови действия.';
     $Self->{Translation}->{'Default name for new projects.'} = 'Име по подразбиране за нови проекти.';
     $Self->{Translation}->{'Default setting for date end.'} = 'Настройка по подразбиране за крайна дата.';
@@ -272,6 +291,7 @@ sub Data {
         'Регулярни изрази за ограничаване на списъка с действия според избрания проект. Ключът съдържа регулярен израз за проект(и), съдържанието съдържа регулярни изрази за действие(я).';
     $Self->{Translation}->{'Regular expressions for constraining project list according to user groups. Key contains regular expression for project(s), content contains comma separated list of groups.'} =
         'Регулярни изрази за ограничаване на списъка с проекти според потребителски групи. Ключът съдържа регулярен израз за проект(и), съдържанието съдържа разделен със запетаи списък от групи.';
+    $Self->{Translation}->{'Show accounted times for this ticket'} = '';
     $Self->{Translation}->{'Specifies if working hours can be inserted without start and end times.'} =
         'Указва дали работните часове могат да бъдат вмъкнати без начален и краен час.';
     $Self->{Translation}->{'Synchronise customers as a new project if they exists in the customer database.'} =
@@ -279,11 +299,14 @@ sub Data {
     $Self->{Translation}->{'This module forces inserts in TimeAccounting.'} = 'Този модул ускорява вмъквания в TimeAccounting.';
     $Self->{Translation}->{'This notification module gives a warning if there are too many incomplete working days.'} =
         'Този модул за уведомяване дава предупреждение, ако има твърде много непълни работни дни.';
+    $Self->{Translation}->{'Ticket time report'} = '';
     $Self->{Translation}->{'Time Accounting'} = 'Отчитане на времето';
+    $Self->{Translation}->{'Time Report'} = '';
     $Self->{Translation}->{'Time accounting edit.'} = 'Редактиране отчитането на времето.';
     $Self->{Translation}->{'Time accounting overview.'} = 'Преглед на отчитането за времето.';
     $Self->{Translation}->{'Time accounting reporting.'} = 'Отчитане на времето.';
     $Self->{Translation}->{'Time accounting settings.'} = 'Настройки за отчитане на времето.';
+    $Self->{Translation}->{'Time accounting ticket report.'} = '';
     $Self->{Translation}->{'Time accounting view.'} = 'Изглед за отчитане на времето.';
     $Self->{Translation}->{'Time accounting.'} = 'Отчитане на времето.';
     $Self->{Translation}->{'To use if some actions reduced the working hours (for example, if only half of the traveling time is paid Key => traveling; Content => 50).'} =

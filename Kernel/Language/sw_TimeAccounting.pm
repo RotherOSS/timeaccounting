@@ -2,7 +2,7 @@
 # OTOBO is a web-based ticketing system for service organisations.
 # --
 # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
-# Copyright (C) 2019-2024 Rother OSS GmbH, https://otobo.io/
+# Copyright (C) 2019-2026 Rother OSS GmbH, https://otobo.io/
 # --
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -23,6 +23,18 @@ use utf8;
 sub Data {
     my $Self = shift;
 
+    # Template: AgentTicketAccountTime
+    $Self->{Translation}->{'Add Time Accounting'} = '';
+    $Self->{Translation}->{'The date must be valid and not later than today!'} = '';
+    $Self->{Translation}->{'Task'} = 'Kazi';
+    $Self->{Translation}->{'Remark'} = 'Maoni';
+    $Self->{Translation}->{'Start time'} = '';
+    $Self->{Translation}->{'End time'} = '';
+    $Self->{Translation}->{'You must enter a start and an end time, or a positive period of up to 24 hours.'} =
+        '';
+    $Self->{Translation}->{'The time period must be given in hours and can be a decimal number.'} =
+        '';
+
     # Template: AgentTimeAccountingDelete
     $Self->{Translation}->{'Do you really want to delete the Time Accounting of this day?'} =
         'Je unataka kufuta Uhasibu wa Muda kwa siku ya leo?';
@@ -42,8 +54,6 @@ sub Data {
     $Self->{Translation}->{'Required fields are marked with a "*".'} = 'Sehemu zinazotakiwa zina alama "*"';
     $Self->{Translation}->{'You have to fill in start and end time or a time period.'} = 'Unatakiwa kujaza muda wa kuanza na kumaliza au muda uliotumika.';
     $Self->{Translation}->{'Project'} = 'Mradi';
-    $Self->{Translation}->{'Task'} = 'Kazi';
-    $Self->{Translation}->{'Remark'} = 'Maoni';
     $Self->{Translation}->{'Origin'} = '';
     $Self->{Translation}->{'Please add a remark with more than 8 characters!'} = '';
     $Self->{Translation}->{'Ursprung'} = '';
@@ -111,6 +121,10 @@ sub Data {
         'Kwa sasa watumiaji amilifu tu katika mradi huu wataonyeshwa. Kubadilisha tabia hii, tafadhali sasisha mpangalio.';
     $Self->{Translation}->{'Currently all time accounting users are shown. To change this behavior, please update setting:'} =
         'Kwa sasa watumiaji wote wa muda uliohesabika wataonyeshwa. Kubadilisha tabia hii, tafadhali sasisha mpangalio.';
+
+    # Template: AgentTimeAccountingReportingTicket
+    $Self->{Translation}->{'Ticket report'} = '';
+    $Self->{Translation}->{'Go to ticket'} = '';
 
     # Template: AgentTimeAccountingSetting
     $Self->{Translation}->{'Edit Time Accounting Project Settings'} = 'Hariri Uhasibu wa Muda kwenye mipangilio ya mradi';
@@ -190,6 +204,10 @@ sub Data {
     $Self->{Translation}->{'Reporting Project'} = '';
     $Self->{Translation}->{'Reporting'} = 'Uarifu';
 
+    # Perl Module: Kernel/Modules/AgentTimeAccountingReportingTicket.pm
+    $Self->{Translation}->{'ReportingProject: Need TicketID'} = '';
+    $Self->{Translation}->{'ReportingProject: No Project for Ticket found.'} = '';
+
     # Perl Module: Kernel/Modules/AgentTimeAccountingSetting.pm
     $Self->{Translation}->{'Unable to update user settings!'} = '';
     $Self->{Translation}->{'Project added!'} = '';
@@ -232,6 +250,7 @@ sub Data {
         '';
     $Self->{Translation}->{'As soon as the synchronisation of ticket TimeUnits is activated, it is possible to set the entries ReadOnly.'} =
         '';
+    $Self->{Translation}->{'Create a new time accounting entry related to the ticket'} = '';
     $Self->{Translation}->{'Default name for new actions.'} = 'Jina la chaguo-msingi kwa vitendo vipya.';
     $Self->{Translation}->{'Default name for new projects.'} = 'Jina la chaguo-msingi kwa miradi mipya';
     $Self->{Translation}->{'Default setting for date end.'} = 'Chaguo-msingi kwa mipangilio ya tarehe ya kumaliza';
@@ -272,6 +291,7 @@ sub Data {
         'Maneno ya kawaida yanayo kwamisha orodha ya vitendo kwa mradi uliochaguliwa. Ufunguo una maneno ya kawaida ya mradi (miradi), maudhui yana maneno ya kawaida ya kitendo (vitendo). ';
     $Self->{Translation}->{'Regular expressions for constraining project list according to user groups. Key contains regular expression for project(s), content contains comma separated list of groups.'} =
         'Maneno ya kawaida ya kuzuia orodha ya mradi kuendana na makundi ya watumiaji. Ufunguo una maneno ya kawaida ya mradi (miradi), maudhui yana makundi yaliyogawanywa kwa alama ya mkato.';
+    $Self->{Translation}->{'Show accounted times for this ticket'} = '';
     $Self->{Translation}->{'Specifies if working hours can be inserted without start and end times.'} =
         'Inabainisha kama masaa ya kazi yanaweza kuingizwa bila ya muda wa kuanza na kumaliza.';
     $Self->{Translation}->{'Synchronise customers as a new project if they exists in the customer database.'} =
@@ -279,11 +299,14 @@ sub Data {
     $Self->{Translation}->{'This module forces inserts in TimeAccounting.'} = 'Hii moduli inaingiza Uhasibu wa Muda';
     $Self->{Translation}->{'This notification module gives a warning if there are too many incomplete working days.'} =
         'Hii moduli ya taarifa inatoa onyo endapo kuna siku nyingi za kazi ambazo hazijakamilika.';
+    $Self->{Translation}->{'Ticket time report'} = '';
     $Self->{Translation}->{'Time Accounting'} = 'Uhasibu wa muda';
+    $Self->{Translation}->{'Time Report'} = '';
     $Self->{Translation}->{'Time accounting edit.'} = 'Hariri uhasibu wa muda.';
     $Self->{Translation}->{'Time accounting overview.'} = 'Mapitio ya uhasibu wa muda.';
     $Self->{Translation}->{'Time accounting reporting.'} = 'Uarifu wa uhasibu wa muda.';
     $Self->{Translation}->{'Time accounting settings.'} = 'Mpangilio wa uhasibu wa muda.';
+    $Self->{Translation}->{'Time accounting ticket report.'} = '';
     $Self->{Translation}->{'Time accounting view.'} = 'Muonekano wa uhasibu wa muda ';
     $Self->{Translation}->{'Time accounting.'} = 'Uhasibu wa muda';
     $Self->{Translation}->{'To use if some actions reduced the working hours (for example, if only half of the traveling time is paid Key => traveling; Content => 50).'} =
