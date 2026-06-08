@@ -619,21 +619,21 @@
     </Setting>
     <Setting Name="TimeAccounting::TicketSync::DefaultProjectID" Required="0" Valid="1">
         <Description Translatable="1">We need to set a default project id when we sync TimeUnits to the TimeAccounting module.</Description>
-        <Navigation>Frontend::Agent::Ticket::ViewActivityRecording</Navigation>
+        <Navigation>Frontend::Agent::View::ActivityRecording</Navigation>
         <Value>
             <Item ValueType="String" ValueRegex="^\d+$">5</Item>
         </Value>
     </Setting>
     <Setting Name="TimeAccounting::TicketSync::DefaultActionID" Required="0" Valid="1">
         <Description Translatable="1">We need to set a default action id when we sync TimeUnits to the TimeAccounting module.</Description>
-        <Navigation>Frontend::Agent::Ticket::ViewActivityRecording</Navigation>
+        <Navigation>Frontend::Agent::View::ActivityRecording</Navigation>
         <Value>
             <Item ValueType="String" ValueRegex="^\d+$">4</Item>
         </Value>
     </Setting>
     <Setting Name="Ticket::EventModulePost###999-TimeAccountingTicketTimeUnitsSync" Required="0" Valid="1">
         <Description Translatable="1">Every time a agent add TimeUnits to a ticket, we sync the information to the timeaccounting module.</Description>
-        <Navigation>Core::Ticket</Navigation>
+        <Navigation>Core::Event::Ticket</Navigation>
         <Value>
             <Hash>
                 <Item Key="Module">Kernel::System::Ticket::Event::TimeAccountingTicketTimeUnitsSync</Item>

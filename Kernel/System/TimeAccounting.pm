@@ -2,7 +2,7 @@
 # OTOBO is a web-based ticketing system for service organisations.
 # --
 # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
-# Copyright (C) 2019-2024 Rother OSS GmbH, https://otobo.de/
+# Copyright (C) 2019-2026 Rother OSS GmbH, https://otobo.io/
 # --
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -1876,7 +1876,6 @@ sub ProjectTotalHours {
     # get database object
     my $DBObject = $Kernel::OM->Get('Kernel::System::DB');
 
-
     my $SQL = 'SELECT SUM(period) FROM time_accounting_table WHERE project_id = ?';
 
     my @Bind = ( \$Param{ProjectID} );
@@ -1978,7 +1977,7 @@ sub ProjectHistory {
         push @Bind, \$Param{TicketID};
     }
 
-    $SQL .= ' ORDER BY time_start',
+    $SQL .= ' ORDER BY time_start';
 
     # ask the database
     $DBObject->Prepare(

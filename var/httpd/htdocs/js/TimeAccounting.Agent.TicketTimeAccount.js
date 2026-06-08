@@ -28,7 +28,7 @@ var TimeAccountingAgent = TimeAccountingAgent || {};
 TimeAccounting.Agent.TicketTimeAccount = (function (TargetNS) {
 
     function InitPeriodCalculation() {
-        // init calculation of period field after working hours where added/substracted/whatever...
+        // init calculation of period field after working hours where added/subtracted/whatever...
         $('#Period').off('change.PeriodCalculation').on('change.PeriodCalculation', function () {
            var FieldValue = $(this).val();
 
@@ -40,11 +40,9 @@ TimeAccounting.Agent.TicketTimeAccount = (function (TargetNS) {
            if (FieldValue.match(/^[0-9.+\- ]+$/)) {
                // Calculation
                try {
-                   /*eslint-disable no-eval */
                    FieldValue = eval(FieldValue);
-                   /*eslint-enable no-eval */
                }
-               catch (CalcError) {
+               catch {
                    FieldValue = 0;
                }
 
@@ -60,7 +58,7 @@ TimeAccounting.Agent.TicketTimeAccount = (function (TargetNS) {
            }
         });
 
-        // init period calculation on starttime and endtime fields
+        // init period calculation on start time and end time fields
         $('#StartTime, #EndTime').off('change.PeriodCalculation').on('change.PeriodCalculation', function () {
             var $StartTime, $EndTime,
                 StartTimeHour, StartTimeMinute, EndTimeHour, EndTimeMinute,

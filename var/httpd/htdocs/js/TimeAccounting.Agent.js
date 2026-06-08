@@ -112,11 +112,9 @@ TimeAccounting.Agent = (function (TargetNS) {
            if (FieldValue.match(/^[0-9.+\- ]+$/)) {
                // Calculation
                try {
-                   /*eslint-disable no-eval */
                    FieldValue = eval(FieldValue);
-                   /*eslint-enable no-eval */
                }
-               catch (CalcError) {
+               catch {
                    FieldValue = 0;
                }
 
