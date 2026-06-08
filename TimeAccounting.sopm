@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <otobo_package version="1.0">
     <Name>TimeAccounting</Name>
-    <Version>11.0.0</Version>
-    <Framework Minimum='11.0.8'>11.0.x</Framework>
+    <Version>0.0.0</Version>
+    <Framework Minimum='11.1.0'>11.1.x</Framework>
     <Vendor>Rother OSS GmbH</Vendor>
     <URL>https://otobo.io/</URL>
     <License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>
@@ -59,20 +59,20 @@
         <File Permission="660" Location="Kernel/Language/vi_VN_TimeAccounting.pm" />
         <File Permission="660" Location="Kernel/Language/zh_CN_TimeAccounting.pm" />
         <File Permission="660" Location="Kernel/Language/zh_TW_TimeAccounting.pm" />
-        <File Permission="660" Location="Kernel/Modules/AgentTicketAccountTime.pm" />        
+        <File Permission="660" Location="Kernel/Modules/AgentTicketAccountTime.pm" />
         <File Permission="660" Location="Kernel/Modules/AgentTimeAccountingEdit.pm" />
         <File Permission="660" Location="Kernel/Modules/AgentTimeAccountingOverview.pm" />
         <File Permission="660" Location="Kernel/Modules/AgentTimeAccountingReporting.pm" />
-	    <File Permission="660" Location="Kernel/Modules/AgentTimeAccountingReportingTicket.pm" />
+        <File Permission="660" Location="Kernel/Modules/AgentTimeAccountingReportingTicket.pm" />
         <File Permission="660" Location="Kernel/Modules/AgentTimeAccountingSetting.pm" />
         <File Permission="660" Location="Kernel/Modules/AgentTimeAccountingView.pm" />
-        <File Permission="660" Location="Kernel/Output/HTML/Templates/Standard/AgentTicketAccountTime.tt" />        
+        <File Permission="660" Location="Kernel/Output/HTML/Templates/Standard/AgentTicketAccountTime.tt" />
         <File Permission="660" Location="Kernel/Output/HTML/Templates/Standard/AgentTimeAccountingDelete.tt" />
         <File Permission="660" Location="Kernel/Output/HTML/Templates/Standard/AgentTimeAccountingEdit.tt" />
         <File Permission="660" Location="Kernel/Output/HTML/Templates/Standard/AgentTimeAccountingOverview.tt" />
         <File Permission="660" Location="Kernel/Output/HTML/Templates/Standard/AgentTimeAccountingReporting.tt" />
         <File Permission="660" Location="Kernel/Output/HTML/Templates/Standard/AgentTimeAccountingReportingProject.tt" />
-	    <File Permission="660" Location="Kernel/Output/HTML/Templates/Standard/AgentTimeAccountingReportingTicket.tt" />
+        <File Permission="660" Location="Kernel/Output/HTML/Templates/Standard/AgentTimeAccountingReportingTicket.tt" />
         <File Permission="660" Location="Kernel/Output/HTML/Templates/Standard/AgentTimeAccountingSetting.tt" />
         <File Permission="660" Location="Kernel/Output/HTML/Templates/Standard/AgentTimeAccountingView.tt" />
         <File Permission="660" Location="Kernel/Output/HTML/Notification/TimeAccounting.pm" />
@@ -100,7 +100,7 @@
         <File Permission="660" Location="var/httpd/htdocs/js/TimeAccounting.Agent.Overview.js" />
         <File Permission="660" Location="var/httpd/htdocs/js/TimeAccounting.Agent.Reporting.js" />
         <File Permission="660" Location="var/httpd/htdocs/js/TimeAccounting.Agent.TicketTimeAccount.js" />
-        <File Permission="660" Location="var/httpd/htdocs/js/TimeAccounting.Agent.View.js" />        
+        <File Permission="660" Location="var/httpd/htdocs/js/TimeAccounting.Agent.View.js" />
         <File Permission="660" Location="var/httpd/htdocs/js/test/TimeAccounting.Agent.EditTimeRecords.UnitTest.html" />
         <File Permission="660" Location="var/httpd/htdocs/js/test/TimeAccounting.Agent.EditTimeRecords.UnitTest.js" />
         <File Permission="660" Location="var/httpd/htdocs/skins/Agent/default/css/TimeAccounting.Defaults.css" />
@@ -259,7 +259,7 @@
 
         $Kernel::OM->Get($CodeModule)->CodeUpgradeFromLowerThan_10_1_2();
     ]]></CodeUpgrade>
-    
+
     <IntroInstall Type="pre" Title="Install Information" Lang="en"><![CDATA[
 
         <br>
