@@ -276,7 +276,7 @@ sub Data {
     $Self->{Translation}->{'If enabled, the dropdown elements in the edit screen are changed to modernized autocompletion fields.'} =
         'Wenn aktiviert werden die Dropdown-Felder im der Editier-Oberfläche in der neuen Form als Feld mit Auto-Vervollständigen angezeigt.';
     $Self->{Translation}->{'If enabled, the filter for the previous projects can be used instead two list of projects (last and all ones). It could be used only if TimeAccounting::EnableAutoCompletion is enabled.'} =
-        'Der Filter bei vorherigen Projekten kann bei Aktivierung genutzt werden, anstelle das zwei Projekt Listen (letzte und alle) genutzt werden. Es kann allerdings nur genutzt werden wenn TimeAccounting::EnableAutoCompletion aktiviert ist.';
+        'Der Filter bei vorherigen Projekten kann bei Aktivierung genutzt werden, anstatt dass zwei Projekt Listen (letzte und alle) genutzt werden. Es kann allerdings nur genutzt werden, sofern TimeAccounting::EnableAutoCompletion aktiviert ist.';
     $Self->{Translation}->{'If enabled, the filter for the previous projects is active by default if there are the previous projects. It could be used only if EnableAutoCompletion and TimeAccounting::UseFilter are enabled.'} =
         'Bei Aktivierung ist der Filter für vorherige Projekte standardmäßig aktiv falls vorherige Projekte vorhanden sind. Er kann nur genutzt werden, wenn EnableAutoCompletion und TimeAccounting::UseFilter aktiviert sind.';
     $Self->{Translation}->{'If enabled, the user is allowed to enter "on vacation leave", "on sick leave" and "on overtime leave" to multiple dates at once.'} =
@@ -298,7 +298,7 @@ sub Data {
         '';
     $Self->{Translation}->{'This module forces inserts in TimeAccounting.'} = 'Dieses Modul zwingt zur Eingabe von Stunden.';
     $Self->{Translation}->{'This notification module gives a warning if there are too many incomplete working days.'} =
-        'Modul, dass den Agent im Notification-Bereich des Agent-Interfaces darüber informiert, wenn schon zu lange keine Stunden mehr eingetragen wurden.';
+        'Dieses Benachrichtigungs-Modul warnt den Agenten davor, dass es zu viele Arbeitstage ohne erfasste Arbeitszeit gibt.';
     $Self->{Translation}->{'Ticket time report'} = '';
     $Self->{Translation}->{'Time Accounting'} = 'Zeiterfassung';
     $Self->{Translation}->{'Time Report'} = 'Zeitübersicht';
