@@ -24,6 +24,7 @@ use Kernel::System::VariableCheck qw( :all );
 
 our @ObjectDependencies = (
     'Kernel::Config',
+    'Kernel::System::Cache',
     'Kernel::System::DB',
     'Kernel::System::Log',
     'Kernel::System::DateTime',
@@ -1081,6 +1082,7 @@ sub UserSettingsInsert {
 
     # delete cache
     delete $Self->{'Cache::UserCurrentPeriodGet'};
+    $Kernel::OM->Get('Kernel::System::Cache')->CleanUp( Type => 'TimeAccountingCompletnessCheck' );
 
     # get database object
     my $DBObject = $Kernel::OM->Get('Kernel::System::DB');
@@ -1165,6 +1167,7 @@ sub UserSettingsUpdate {
 
     # delete cache
     delete $Self->{'Cache::UserCurrentPeriodGet'};
+    $Kernel::OM->Get('Kernel::System::Cache')->CleanUp( Type => 'TimeAccountingCompletnessCheck' );
 
     my $UserID = $Param{UserID};
 
@@ -1275,6 +1278,15 @@ sub WorkingUnitsCompletnessCheck {
         $DateTimeSettings->{Month},
         $DateTimeSettings->{Year},
     );
+
+    # The result only changes when working units or user settings are changed, or on the next day.
+    my $CacheObject = $Kernel::OM->Get('Kernel::System::Cache');
+    my $CacheKey    = sprintf '%s::%04d-%02d-%02d', $UserID, $Year, $Month, $Day;
+    my $Cache       = $CacheObject->Get(
+        Type => 'TimeAccountingCompletnessCheck',
+        Key  => $CacheKey,
+    );
+    return %{$Cache} if ref $Cache eq 'HASH';
 
     # TODO: Search only in the CurrentUserPeriod
     # TODO: Search only working units where action_id and project_id is true
@@ -1479,6 +1491,14 @@ sub WorkingUnitsCompletnessCheck {
         }
     }
 
+    # cache until the end of the day
+    $CacheObject->Set(
+        Type  => 'TimeAccountingCompletnessCheck',
+        Key   => $CacheKey,
+        Value => \%Data,
+        TTL   => 60 + 86400 - ( $Hour * 3600 + $Min * 60 + $Sec ),
+    );
+
     return %Data;
 }
 
@@ -1631,6 +1651,9 @@ sub WorkingUnitsInsert {
 
     my $Date = sprintf "%04d-%02d-%02d", $Param{Year}, $Param{Month}, $Param{Day};
 
+    # delete cache
+    $Kernel::OM->Get('Kernel::System::Cache')->CleanUp( Type => 'TimeAccountingCompletnessCheck' );
+
     # add special time working units
     my %SpecialAction = (
         'Sick'     => '-1',
@@ -1718,6 +1741,9 @@ sub WorkingUnitsDelete {
     my $Date      = sprintf "%04d-%02d-%02d", $Param{Year}, $Param{Month}, $Param{Day};
     my $StartTime = $Date . ' 00:00:00';
     my $EndTime   = $Date . ' 23:59:59';
+
+    # delete cache
+    $Kernel::OM->Get('Kernel::System::Cache')->CleanUp( Type => 'TimeAccountingCompletnessCheck' );
 
     return if !$Kernel::OM->Get('Kernel::System::DB')->Do(
         SQL => '
@@ -2579,3 +2605,4 @@ the enclosed file COPYING for license information (GPL). If you
 did not receive this file, see L<https://www.gnu.org/licenses/gpl-3.0.txt>.
 
 =cut
+
