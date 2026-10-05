@@ -2,21 +2,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TimeAccounting\n"
 "POT-Creation-Date: 2026-03-09 14:12+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2026-10-05 07:41+0000\n"
+"Last-Translator: Kozo Sakurai <sakurai@io-architect.com>\n"
+"Language-Team: Japanese <http://translate.otobo.org/projects/otobo-11-1/"
+"addons/timeaccounting/ja/>\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.9\n"
 
 #. Template: AgentTicketAccountTime
 msgid "Add Time Accounting"
-msgstr ""
+msgstr "作業時間を追加"
 
 #. Template: AgentTicketAccountTime
 msgid "The date must be valid and not later than today!"
-msgstr ""
+msgstr "日付は有効で、今日以前である必要があります！"
 
 #. Template: AgentTicketAccountTime
 msgid "Task"
@@ -28,21 +31,21 @@ msgstr "注釈"
 
 #. Template: AgentTicketAccountTime
 msgid "Start time"
-msgstr ""
+msgstr "開始時刻"
 
 #. Template: AgentTicketAccountTime
 msgid "End time"
-msgstr ""
+msgstr "終了時刻"
 
 #. Template: AgentTicketAccountTime
 msgid ""
 "You must enter a start and an end time, or a positive period of up to 24 "
 "hours."
-msgstr ""
+msgstr "開始時刻と終了時刻、または24時間以内の正の期間を入力する必要があります。"
 
 #. Template: AgentTicketAccountTime
 msgid "The time period must be given in hours and can be a decimal number."
-msgstr ""
+msgstr "期間は時間単位で入力してください。小数も使用できます。"
 
 #. Template: AgentTimeAccountingDelete
 msgid "Do you really want to delete the Time Accounting of this day?"
@@ -102,7 +105,7 @@ msgstr "プロジェクト"
 
 #. Template: AgentTimeAccountingEdit
 msgid "Origin"
-msgstr ""
+msgstr "発生元"
 
 #. Template: AgentTimeAccountingEdit
 msgid "Please add a remark with more than 8 characters!"
@@ -110,7 +113,7 @@ msgstr "8文字以上の注釈を追加してください。"
 
 #. Template: AgentTimeAccountingEdit
 msgid "Ursprung"
-msgstr ""
+msgstr "発生元"
 
 #. Template: AgentTimeAccountingEdit
 msgid "Negative times are not allowed."
@@ -155,7 +158,7 @@ msgstr "「期間」の設定が不正です。（－（マイナス）は許可
 
 #. Template: AgentTimeAccountingEdit
 msgid "Submit changes"
-msgstr ""
+msgstr "変更を送信"
 
 #. Template: AgentTimeAccountingEdit
 msgid "Add one row"
@@ -335,11 +338,11 @@ msgstr ""
 
 #. Template: AgentTimeAccountingReportingTicket
 msgid "Ticket report"
-msgstr ""
+msgstr "チケットレポート"
 
 #. Template: AgentTimeAccountingReportingTicket
 msgid "Go to ticket"
-msgstr ""
+msgstr "チケットへ移動"
 
 #. Template: AgentTimeAccountingSetting
 msgid "Edit Time Accounting Project Settings"
@@ -376,7 +379,7 @@ msgstr "新規タスクの追加"
 
 #. Template: AgentTimeAccountingSetting
 msgid "Add a user to time accounting."
-msgstr ""
+msgstr "作業時間管理にユーザーを追加します。"
 
 #. Template: AgentTimeAccountingSetting
 msgid "Filter for projects, tasks or users"
@@ -612,11 +615,11 @@ msgstr "報告する"
 
 #. Perl Module: Kernel/Modules/AgentTimeAccountingReportingTicket.pm
 msgid "ReportingProject: Need TicketID"
-msgstr ""
+msgstr "ReportingProject: TicketID が必要です"
 
 #. Perl Module: Kernel/Modules/AgentTimeAccountingReportingTicket.pm
 msgid "ReportingProject: No Project for Ticket found."
-msgstr ""
+msgstr "ReportingProject: チケットのプロジェクトが見つかりません。"
 
 #. Perl Module: Kernel/Modules/AgentTimeAccountingSetting.pm
 msgid "Unable to update user settings!"
@@ -707,6 +710,8 @@ msgid ""
 "Activate the synchronisation of Ticket-TimeUnits into the TimeAccounting "
 "module."
 msgstr ""
+"チケットの作業時間（TimeUnits）を TimeAccounting モジュールに同期する機能を有"
+"効にします。"
 
 #. SysConfig
 msgid ""
@@ -721,16 +726,20 @@ msgid ""
 "Also synchronise customers as a new project if they have not yet been "
 "created in the customer database."
 msgstr ""
+"顧客データベースにまだ作成されていない顧客も、新しいプロジェクトとして同期し"
+"ます。"
 
 #. SysConfig
 msgid ""
 "As soon as the synchronisation of ticket TimeUnits is activated, it is "
 "possible to set the entries ReadOnly."
 msgstr ""
+"チケットの作業時間の同期を有効にすると、エントリーを読み取り専用（ReadOnly）"
+"に設定できます。"
 
 #. SysConfig
 msgid "Create a new time accounting entry related to the ticket"
-msgstr ""
+msgstr "このチケットに関連する作業時間のエントリーを新規作成します"
 
 #. SysConfig
 msgid "Default name for new actions."
@@ -804,6 +813,8 @@ msgid ""
 "Every time a agent add TimeUnits to a ticket, we sync the information to the "
 "timeaccounting module."
 msgstr ""
+"担当者がチケットに作業時間を追加するたびに、その情報を TimeAccounting "
+"モジュールに同期します。"
 
 #. SysConfig
 msgid "For how many days ago you can insert working units."
@@ -894,7 +905,7 @@ msgstr ""
 
 #. SysConfig
 msgid "Show accounted times for this ticket"
-msgstr ""
+msgstr "このチケットの作業時間を表示します"
 
 #. SysConfig
 msgid "Specifies if working hours can be inserted without start and end times."
@@ -906,7 +917,7 @@ msgstr ""
 msgid ""
 "Synchronise customers as a new project if they exists in the customer "
 "database."
-msgstr ""
+msgstr "顧客データベースに存在する顧客を、新しいプロジェクトとして同期します。"
 
 #. SysConfig
 msgid "This module forces inserts in TimeAccounting."
@@ -922,7 +933,7 @@ msgstr ""
 
 #. SysConfig
 msgid "Ticket time report"
-msgstr ""
+msgstr "チケットの作業時間レポート"
 
 #. SysConfig
 msgid "Time Accounting"
@@ -930,7 +941,7 @@ msgstr "タイムアカウンティング"
 
 #. SysConfig
 msgid "Time Report"
-msgstr ""
+msgstr "作業時間レポート"
 
 #. SysConfig
 msgid "Time accounting edit."
@@ -950,7 +961,7 @@ msgstr "タイムアカウンティングの設定"
 
 #. SysConfig
 msgid "Time accounting ticket report."
-msgstr ""
+msgstr "作業時間管理のチケットレポート。"
 
 #. SysConfig
 msgid "Time accounting view."
@@ -974,21 +985,30 @@ msgid ""
 "Use Service as Action. Please add as key the timeacounting action and the "
 "service as value. RegEx are allowed."
 msgstr ""
+"サービスをアクションとして使用します。キーに TimeAccounting のアクション、値"
+"にサービスを追加してください。正規表現を使用できます。"
 
 #. SysConfig
 msgid ""
 "We need to set a default action id when we sync TimeUnits to the "
 "TimeAccounting module."
 msgstr ""
+"作業時間を TimeAccounting モジュールに同期する際のデフォルトのアクションIDを"
+"設定する必要があります。"
 
 #. SysConfig
 msgid ""
 "We need to set a default project id when we sync TimeUnits to the "
 "TimeAccounting module."
 msgstr ""
+"作業時間を TimeAccounting モジュールに同期する際のデフォルトのプロジェクトID"
+"を設定する必要があります。"
 
 #. SysConfig
 msgid ""
 "We save the Article TimeUnit to a DynamicField from type \"Article\". Please "
 "add here the name of the field if the initinal name is changed."
 msgstr ""
+"記事の作業時間は、タイプ \"Article\" のダイナミックフィールドに保存されます。"
+"初期のフィールド名を変更した場合は、ここにそのフィールド名を入力してください"
+"。"
