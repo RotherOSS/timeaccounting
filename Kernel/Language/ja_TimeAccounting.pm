@@ -24,16 +24,16 @@ sub Data {
     my $Self = shift;
 
     # Template: AgentTicketAccountTime
-    $Self->{Translation}->{'Add Time Accounting'} = '';
-    $Self->{Translation}->{'The date must be valid and not later than today!'} = '';
+    $Self->{Translation}->{'Add Time Accounting'} = '作業時間を追加';
+    $Self->{Translation}->{'The date must be valid and not later than today!'} = '日付は有効で、今日以前である必要があります！';
     $Self->{Translation}->{'Task'} = 'タスク';
     $Self->{Translation}->{'Remark'} = '注釈';
-    $Self->{Translation}->{'Start time'} = '';
-    $Self->{Translation}->{'End time'} = '';
+    $Self->{Translation}->{'Start time'} = '開始時刻';
+    $Self->{Translation}->{'End time'} = '終了時刻';
     $Self->{Translation}->{'You must enter a start and an end time, or a positive period of up to 24 hours.'} =
-        '';
+        '開始時刻と終了時刻、または24時間以内の正の期間を入力する必要があります。';
     $Self->{Translation}->{'The time period must be given in hours and can be a decimal number.'} =
-        '';
+        '期間は時間単位で入力してください。小数も使用できます。';
 
     # Template: AgentTimeAccountingDelete
     $Self->{Translation}->{'Do you really want to delete the Time Accounting of this day?'} =
@@ -54,9 +54,9 @@ sub Data {
     $Self->{Translation}->{'Required fields are marked with a "*".'} = '* の項目は入力必須です。';
     $Self->{Translation}->{'You have to fill in start and end time or a time period.'} = '開始時間と終了時間、または期間を指定してください。';
     $Self->{Translation}->{'Project'} = 'プロジェクト';
-    $Self->{Translation}->{'Origin'} = '';
+    $Self->{Translation}->{'Origin'} = '発生元';
     $Self->{Translation}->{'Please add a remark with more than 8 characters!'} = '8文字以上の注釈を追加してください。';
-    $Self->{Translation}->{'Ursprung'} = '';
+    $Self->{Translation}->{'Ursprung'} = '発生元';
     $Self->{Translation}->{'Negative times are not allowed.'} = '－（マイナス）の時間は入力できません';
     $Self->{Translation}->{'Repeated hours are not allowed. Start time matches another interval.'} =
         '繰り返された時間は許可されません。開始時刻は別の間隔と一致します。';
@@ -69,7 +69,7 @@ sub Data {
     $Self->{Translation}->{'Invalid period! A day has only 24 hours.'} = '「期間」の設定が不正です。（24時間以上は許可されません）';
     $Self->{Translation}->{'A valid period must be greater than zero.'} = '「期間」の設定が不正です。（0は許可されません）';
     $Self->{Translation}->{'Invalid period! Negative periods are not allowed.'} = '「期間」の設定が不正です。（－（マイナス）は許可されません）';
-    $Self->{Translation}->{'Submit changes'} = '';
+    $Self->{Translation}->{'Submit changes'} = '変更を送信';
     $Self->{Translation}->{'Add one row'} = '行の追加';
     $Self->{Translation}->{'You can only select one checkbox element!'} = '1項目のみ選択できます。';
     $Self->{Translation}->{'Are you sure that you worked while you were on sick leave?'} = '病欠に設定された期間中に稼働しましたか？';
@@ -123,8 +123,8 @@ sub Data {
         'すべてのタイムアカウントユーザーを表示しています、変更するには設定を更新してください。';
 
     # Template: AgentTimeAccountingReportingTicket
-    $Self->{Translation}->{'Ticket report'} = '';
-    $Self->{Translation}->{'Go to ticket'} = '';
+    $Self->{Translation}->{'Ticket report'} = 'チケットレポート';
+    $Self->{Translation}->{'Go to ticket'} = 'チケットへ移動';
 
     # Template: AgentTimeAccountingSetting
     $Self->{Translation}->{'Edit Time Accounting Project Settings'} = '時間会計 プロジェクト設定の編集';
@@ -136,7 +136,7 @@ sub Data {
         '同名のプロジェクトが存在します。名称を変更してください。';
     $Self->{Translation}->{'Edit Time Accounting Settings'} = '設定の編集';
     $Self->{Translation}->{'Add task'} = '新規タスクの追加';
-    $Self->{Translation}->{'Add a user to time accounting.'} = '';
+    $Self->{Translation}->{'Add a user to time accounting.'} = '作業時間管理にユーザーを追加します。';
     $Self->{Translation}->{'Filter for projects, tasks or users'} = 'プロジェクト、タスク、またはユーザーのフィルタリング';
     $Self->{Translation}->{'Time periods can not be deleted.'} = '時間は削除できません';
     $Self->{Translation}->{'Project List'} = 'プロジェクト一覧';
@@ -205,8 +205,8 @@ sub Data {
     $Self->{Translation}->{'Reporting'} = '報告する';
 
     # Perl Module: Kernel/Modules/AgentTimeAccountingReportingTicket.pm
-    $Self->{Translation}->{'ReportingProject: Need TicketID'} = '';
-    $Self->{Translation}->{'ReportingProject: No Project for Ticket found.'} = '';
+    $Self->{Translation}->{'ReportingProject: Need TicketID'} = 'ReportingProject: TicketID が必要です';
+    $Self->{Translation}->{'ReportingProject: No Project for Ticket found.'} = 'ReportingProject: チケットのプロジェクトが見つかりません。';
 
     # Perl Module: Kernel/Modules/AgentTimeAccountingSetting.pm
     $Self->{Translation}->{'Unable to update user settings!'} = 'ユーザー設定を更新できません！';
@@ -243,14 +243,14 @@ sub Data {
 
     # SysConfig
     $Self->{Translation}->{'Activate the synchronisation of Ticket-TimeUnits into the TimeAccounting module.'} =
-        '';
+        'チケットの作業時間（TimeUnits）を TimeAccounting モジュールに同期する機能を有効にします。';
     $Self->{Translation}->{'Agent interface notification module to see the number of incomplete working days for the user.'} =
         'ユーザの不完全な稼働日数をカウントし通知するエージェント・インターフェイスです。';
     $Self->{Translation}->{'Also synchronise customers as a new project if they have not yet been created in the customer database.'} =
-        '';
+        '顧客データベースにまだ作成されていない顧客も、新しいプロジェクトとして同期します。';
     $Self->{Translation}->{'As soon as the synchronisation of ticket TimeUnits is activated, it is possible to set the entries ReadOnly.'} =
-        '';
-    $Self->{Translation}->{'Create a new time accounting entry related to the ticket'} = '';
+        'チケットの作業時間の同期を有効にすると、エントリーを読み取り専用（ReadOnly）に設定できます。';
+    $Self->{Translation}->{'Create a new time accounting entry related to the ticket'} = 'このチケットに関連する作業時間のエントリーを新規作成します';
     $Self->{Translation}->{'Default name for new actions.'} = '新規操作に対するデフォルトの名称';
     $Self->{Translation}->{'Default name for new projects.'} = '新規プロジェクトに対するデフォルトの名称';
     $Self->{Translation}->{'Default setting for date end.'} = '「終了日」のデフォルト値';
@@ -269,7 +269,7 @@ sub Data {
     $Self->{Translation}->{'Edit time accounting settings.'} = '時間会計の設定を編集';
     $Self->{Translation}->{'Edit time record.'} = 'タイムレコードを編集';
     $Self->{Translation}->{'Every time a agent add TimeUnits to a ticket, we sync the information to the timeaccounting module.'} =
-        '';
+        '担当者がチケットに作業時間を追加するたびに、その情報を TimeAccounting モジュールに同期します。';
     $Self->{Translation}->{'For how many days ago you can insert working units.'} = '何日前からワーキング・ユニットの新規登録が可能であるかの設定です。';
     $Self->{Translation}->{'If enabled, only users that has added working time to the selected project are shown.'} =
         '有効時には、該当のプロジェクトに稼働時間を投入しているユーザーのみ表示されます';
@@ -291,34 +291,34 @@ sub Data {
         'プロジェクトによって行動リストを絞り込むための正規表現。「鍵」ではプロジェクトに対する正規表現を、「内容」では`行動`に対する正規表現を指定する。';
     $Self->{Translation}->{'Regular expressions for constraining project list according to user groups. Key contains regular expression for project(s), content contains comma separated list of groups.'} =
         'ユーザグループによってプロジェクトリストを絞り込むための正規表現。「鍵」ではプロジェクトに対する正規表現を、「内容」ではカンマ区切りのユーザリストを指定する。';
-    $Self->{Translation}->{'Show accounted times for this ticket'} = '';
+    $Self->{Translation}->{'Show accounted times for this ticket'} = 'このチケットの作業時間を表示します';
     $Self->{Translation}->{'Specifies if working hours can be inserted without start and end times.'} =
         '業務時間を「開始時間」と「終了時間」の指定ナシで新規登録できるかどうか指定する。';
     $Self->{Translation}->{'Synchronise customers as a new project if they exists in the customer database.'} =
-        '';
+        '顧客データベースに存在する顧客を、新しいプロジェクトとして同期します。';
     $Self->{Translation}->{'This module forces inserts in TimeAccounting.'} = 'TimeAccountingモジュールと同等の項目が設定必須となります。';
     $Self->{Translation}->{'This notification module gives a warning if there are too many incomplete working days.'} =
         'あまりにも多くの不完全な稼働日がある場合、この通知モジュールは警告を与えます。';
-    $Self->{Translation}->{'Ticket time report'} = '';
+    $Self->{Translation}->{'Ticket time report'} = 'チケットの作業時間レポート';
     $Self->{Translation}->{'Time Accounting'} = 'タイムアカウンティング';
-    $Self->{Translation}->{'Time Report'} = '';
+    $Self->{Translation}->{'Time Report'} = '作業時間レポート';
     $Self->{Translation}->{'Time accounting edit.'} = 'タイムアカウンティングを編集する';
     $Self->{Translation}->{'Time accounting overview.'} = 'タイムアカウンティングの概要';
     $Self->{Translation}->{'Time accounting reporting.'} = 'タイムアカウンティングの報告';
     $Self->{Translation}->{'Time accounting settings.'} = 'タイムアカウンティングの設定';
-    $Self->{Translation}->{'Time accounting ticket report.'} = '';
+    $Self->{Translation}->{'Time accounting ticket report.'} = '作業時間管理のチケットレポート。';
     $Self->{Translation}->{'Time accounting view.'} = 'タイムアカウンティング ビュー';
     $Self->{Translation}->{'Time accounting.'} = '時間会計';
     $Self->{Translation}->{'To use if some actions reduced the working hours (for example, if only half of the traveling time is paid Key => traveling; Content => 50).'} =
         '業務上の行動において、稼働時間として計上する時間を調整する必要がある場合に、この設定を使用します。（例：「移動時間」の50%のみ勤務時間相当とする場合「鍵」に`journey`、「内容」に`50`と設定)';
     $Self->{Translation}->{'Use Service as Action. Please add as key the timeacounting action and the service as value. RegEx are allowed.'} =
-        '';
+        'サービスをアクションとして使用します。キーに TimeAccounting のアクション、値にサービスを追加してください。正規表現を使用できます。';
     $Self->{Translation}->{'We need to set a default action id when we sync TimeUnits to the TimeAccounting module.'} =
-        '';
+        '作業時間を TimeAccounting モジュールに同期する際のデフォルトのアクションIDを設定する必要があります。';
     $Self->{Translation}->{'We need to set a default project id when we sync TimeUnits to the TimeAccounting module.'} =
-        '';
+        '作業時間を TimeAccounting モジュールに同期する際のデフォルトのプロジェクトIDを設定する必要があります。';
     $Self->{Translation}->{'We save the Article TimeUnit to a DynamicField from type "Article". Please add here the name of the field if the initinal name is changed.'} =
-        '';
+        '記事の作業時間は、タイプ "Article" のダイナミックフィールドに保存されます。初期のフィールド名を変更した場合は、ここにそのフィールド名を入力してください。';
 
 
     push @{ $Self->{JavaScriptStrings} // [] }, (
