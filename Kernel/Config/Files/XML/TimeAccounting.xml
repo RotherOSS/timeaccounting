@@ -583,56 +583,56 @@
         </Value>
     </Setting>
     <Setting Name="TimeAccounting::TicketSync::Enable" Required="0" Valid="0">
-        <Description Translatable="1">Activate the synchronisation of Ticket-TimeUnits into the TimeAccounting module.</Description>
+        <Description Translatable="1">Activate the synchronization of ticket time units into the time accounting module.</Description>
         <Navigation>Core::TimeAccounting::TicketSync</Navigation>
         <Value>
             <Item ValueType="Checkbox">1</Item>
         </Value>
     </Setting>
     <Setting Name="TimeAccounting::TicketSync::SetEntryReadOnly" Required="1" Valid="1">
-        <Description Translatable="1">As soon as the synchronisation of ticket TimeUnits is activated, it is possible to set the entries ReadOnly.</Description>
+        <Description Translatable="1">As soon as the synchronization of ticket time units is activated, it is possible to set the entries read only.</Description>
         <Navigation>Core::TimeAccounting::TicketSync</Navigation>
         <Value>
             <Item ValueType="Checkbox">1</Item>
         </Value>
     </Setting>
     <Setting Name="TimeAccounting::TicketSync::CreateProjectFromCustomerID" Required="1" Valid="1">
-        <Description Translatable="1">Synchronise customers as a new project if they exists in the customer database.</Description>
+        <Description Translatable="1">Synchronize customers as a new project if they exists in the customer database.</Description>
         <Navigation>Core::TimeAccounting::TicketSync</Navigation>
         <Value>
             <Item ValueType="Checkbox">1</Item>
         </Value>
     </Setting>
     <Setting Name="TimeAccounting::TicketSync::CreateProjectFromTMPCustomerID" Required="1" Valid="1">
-        <Description Translatable="1">Also synchronise customers as a new project if they have not yet been created in the customer database.</Description>
+        <Description Translatable="1">Also synchronize customers as a new project if they have not yet been created in the customer database.</Description>
         <Navigation>Core::TimeAccounting::TicketSync</Navigation>
         <Value>
             <Item ValueType="Checkbox">0</Item>
         </Value>
     </Setting>
     <Setting Name="TimeAccounting::TicketSync::SaveTimeUnitToArticleField" Required="0" Valid="0">
-        <Description Translatable="1">We save the Article TimeUnit to a DynamicField from type "Article". Please add here the name of the field if the initinal name is changed.</Description>
+        <Description Translatable="1">We save the article time unit to a dynamic field of type “Article”. Please add here the name of the field if the initial name is changed.</Description>
         <Navigation>Core::TimeAccounting::TicketSync</Navigation>
         <Value>
             <Item ValueType="String" ValueRegex="">ArticleTimeUnits</Item>
         </Value>
     </Setting>
     <Setting Name="TimeAccounting::TicketSync::DefaultProjectID" Required="0" Valid="1">
-        <Description Translatable="1">We need to set a default project id when we sync TimeUnits to the TimeAccounting module.</Description>
+        <Description Translatable="1">We need to set a default project ID when we sync time units to the time accounting module.</Description>
         <Navigation>Frontend::Agent::View::ActivityRecording</Navigation>
         <Value>
             <Item ValueType="String" ValueRegex="^\d+$">5</Item>
         </Value>
     </Setting>
     <Setting Name="TimeAccounting::TicketSync::DefaultActionID" Required="0" Valid="1">
-        <Description Translatable="1">We need to set a default action id when we sync TimeUnits to the TimeAccounting module.</Description>
+        <Description Translatable="1">We need to set a default action ID when we sync time units to the time accounting module.</Description>
         <Navigation>Frontend::Agent::View::ActivityRecording</Navigation>
         <Value>
             <Item ValueType="String" ValueRegex="^\d+$">4</Item>
         </Value>
     </Setting>
     <Setting Name="Ticket::EventModulePost###999-TimeAccountingTicketTimeUnitsSync" Required="0" Valid="1">
-        <Description Translatable="1">Every time a agent add TimeUnits to a ticket, we sync the information to the timeaccounting module.</Description>
+        <Description Translatable="1">Every time an agent adds time units to a ticket, we sync the information to the time accounting module.</Description>
         <Navigation>Core::Event::Ticket</Navigation>
         <Value>
             <Hash>
@@ -642,7 +642,7 @@
         </Value>
     </Setting>
     <Setting Name="TimeAccounting::TicketSync::ServiceToAction" Required="0" Valid="1">
-        <Description Translatable="1">Use Service as Action. Please add as key the timeacounting action and the service as value. RegEx are allowed.</Description>
+        <Description Translatable="1">Use service as action. Please add as key the “timeacounting” action and the service as value. Regular expressions are allowed.</Description>
         <Navigation>Core::Ticket</Navigation>
         <Value>
             <Hash>
