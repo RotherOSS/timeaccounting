@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TimeAccounting\n"
 "POT-Creation-Date: 2026-03-09 14:12+0000\n"
-"PO-Revision-Date: 2026-10-13 14:41+0000\n"
+"PO-Revision-Date: 2026-10-21 14:41+0000\n"
 "Last-Translator: Balázs Úr <balazs@urbalazs.hu>\n"
 "Language-Team: Hungarian <http://translate.otobo.org/projects/otobo-11-1/"
 "addons/timeaccounting/hu/>\n"
@@ -15,11 +15,11 @@ msgstr ""
 
 #. Template: AgentTicketAccountTime
 msgid "Add Time Accounting"
-msgstr ""
+msgstr "Időelszámolás hozzáadása"
 
 #. Template: AgentTicketAccountTime
 msgid "The date must be valid and not later than today!"
-msgstr ""
+msgstr "A dátumnak érvényesnek kell lennie, és nem lehet későbbi a mai napnál!"
 
 #. Template: AgentTicketAccountTime
 msgid "Task"
@@ -31,21 +31,23 @@ msgstr "Észrevétel"
 
 #. Template: AgentTicketAccountTime
 msgid "Start time"
-msgstr ""
+msgstr "Kezdési idő"
 
 #. Template: AgentTicketAccountTime
 msgid "End time"
-msgstr ""
+msgstr "Befejezési idő"
 
 #. Template: AgentTicketAccountTime
 msgid ""
 "You must enter a start and an end time, or a positive period of up to 24 "
 "hours."
 msgstr ""
+"Meg kell adnia egy kezdési és egy befejezési időt, vagy egy legfeljebb 24 "
+"órás pozitív időszakot."
 
 #. Template: AgentTicketAccountTime
 msgid "The time period must be given in hours and can be a decimal number."
-msgstr ""
+msgstr "Az időszakot órában kell megadni, és lehet tizedes szám is."
 
 #. Template: AgentTimeAccountingDelete
 msgid "Do you really want to delete the Time Accounting of this day?"
@@ -105,7 +107,7 @@ msgstr "Projekt"
 
 #. Template: AgentTimeAccountingEdit
 msgid "Origin"
-msgstr ""
+msgstr "Eredet"
 
 #. Template: AgentTimeAccountingEdit
 msgid "Please add a remark with more than 8 characters!"
@@ -113,7 +115,7 @@ msgstr "Adjon hozzá egy 8 karakternél hosszabb észrevételt!"
 
 #. Template: AgentTimeAccountingEdit
 msgid "Ursprung"
-msgstr ""
+msgstr "Eredet"
 
 #. Template: AgentTimeAccountingEdit
 msgid "Negative times are not allowed."
@@ -161,7 +163,7 @@ msgstr "Érvénytelen időszak! Negatív időszakok nem engedélyezettek."
 
 #. Template: AgentTimeAccountingEdit
 msgid "Submit changes"
-msgstr ""
+msgstr "Változtatások elküldése"
 
 #. Template: AgentTimeAccountingEdit
 msgid "Add one row"
@@ -341,11 +343,11 @@ msgstr ""
 
 #. Template: AgentTimeAccountingReportingTicket
 msgid "Ticket report"
-msgstr ""
+msgstr "Jegyjelentés"
 
 #. Template: AgentTimeAccountingReportingTicket
 msgid "Go to ticket"
-msgstr ""
+msgstr "Ugrás a jegyhez"
 
 #. Template: AgentTimeAccountingSetting
 msgid "Edit Time Accounting Project Settings"
@@ -382,7 +384,7 @@ msgstr "Feladat hozzáadása"
 
 #. Template: AgentTimeAccountingSetting
 msgid "Add a user to time accounting."
-msgstr ""
+msgstr "Felhasználó hozzáadása az időelszámoláshoz."
 
 #. Template: AgentTimeAccountingSetting
 msgid "Filter for projects, tasks or users"
@@ -485,7 +487,7 @@ msgstr "Jogosult túlóra"
 
 #. Template: AgentTimeAccountingSetting
 msgid "Start Date"
-msgstr "Kezdési dátum"
+msgstr "Kezdődátum"
 
 #. Template: AgentTimeAccountingSetting
 msgid "Please insert a valid date."
@@ -549,8 +551,7 @@ msgstr "Legutóbbi projektek"
 
 #. Perl Module: Kernel/Modules/AgentTimeAccountingEdit.pm
 msgid "Can't save settings, because a day has only 24 hours!"
-msgstr ""
-"Nem lehet elmenteni a beállításokat, mert egy napnak csak 24 órája van!"
+msgstr "Nem lehet elmenteni a beállításokat, mert egy napnak csak 24 órája van!"
 
 #. Perl Module: Kernel/Modules/AgentTimeAccountingEdit.pm
 msgid "Can't delete Working Units!"
@@ -609,23 +610,23 @@ msgstr "Minden projekt"
 
 #. Perl Module: Kernel/Modules/AgentTimeAccountingReporting.pm
 msgid "ReportingProject: Need ProjectID"
-msgstr "Jelentés projekt: projektazonosító szükséges"
+msgstr "Jelentéskészítési projekt: projektazonosító szükséges"
 
 #. Perl Module: Kernel/Modules/AgentTimeAccountingReporting.pm
 msgid "Reporting Project"
-msgstr "Jelentés projekt"
+msgstr "Jelentéskészítési projekt"
 
 #. Perl Module: Kernel/Modules/AgentTimeAccountingReporting.pm
 msgid "Reporting"
-msgstr "Jelentés"
+msgstr "Jelentéskészítés"
 
 #. Perl Module: Kernel/Modules/AgentTimeAccountingReportingTicket.pm
 msgid "ReportingProject: Need TicketID"
-msgstr ""
+msgstr "Jelentéskészítési projekt: jegyazonosító szükséges"
 
 #. Perl Module: Kernel/Modules/AgentTimeAccountingReportingTicket.pm
 msgid "ReportingProject: No Project for Ticket found."
-msgstr ""
+msgstr "Jelentéskészítési projekt: nem található projekt a jegyhez."
 
 #. Perl Module: Kernel/Modules/AgentTimeAccountingSetting.pm
 msgid "Unable to update user settings!"
@@ -716,6 +717,7 @@ msgid ""
 "Activate the synchronisation of Ticket-TimeUnits into the TimeAccounting "
 "module."
 msgstr ""
+"A jegy időegységei szinkronizálásának aktiválása az időelszámolási modulba."
 
 #. SysConfig
 msgid ""
@@ -730,16 +732,20 @@ msgid ""
 "Also synchronise customers as a new project if they have not yet been "
 "created in the customer database."
 msgstr ""
+"Szinkronizálja az ügyfeleket is új projektként, ha még nem lettek létrehozva "
+"az ügyféladatbázisban."
 
 #. SysConfig
 msgid ""
 "As soon as the synchronisation of ticket TimeUnits is activated, it is "
 "possible to set the entries ReadOnly."
 msgstr ""
+"Amint a jegy időegységeinek szinkronizálása aktiválásra kerül, lehetőség van "
+"a bejegyzések csak olvashatóként való beállítására."
 
 #. SysConfig
 msgid "Create a new time accounting entry related to the ticket"
-msgstr ""
+msgstr "A jegyhez kapcsolódó új időelszámolási bejegyzés létrehozása"
 
 #. SysConfig
 msgid "Default name for new actions."
@@ -815,6 +821,8 @@ msgid ""
 "Every time a agent add TimeUnits to a ticket, we sync the information to the "
 "timeaccounting module."
 msgstr ""
+"Valahányszor egy ügyintéző időegységeket ad hozzá egy jegyhez, "
+"szinkronizáljuk az információkat az időelszámolási modullal."
 
 #. SysConfig
 msgid "For how many days ago you can insert working units."
@@ -909,7 +917,7 @@ msgstr ""
 
 #. SysConfig
 msgid "Show accounted times for this ticket"
-msgstr ""
+msgstr "Elszámolt idők megjelenítése ennél a jegynél"
 
 #. SysConfig
 msgid "Specifies if working hours can be inserted without start and end times."
@@ -921,6 +929,7 @@ msgid ""
 "Synchronise customers as a new project if they exists in the customer "
 "database."
 msgstr ""
+"Ügyfelek szinkronizálása új projektként, ha léteznek az ügyféladatbázisban."
 
 #. SysConfig
 msgid "This module forces inserts in TimeAccounting."
@@ -936,7 +945,7 @@ msgstr ""
 
 #. SysConfig
 msgid "Ticket time report"
-msgstr ""
+msgstr "Jegy időjelentése"
 
 #. SysConfig
 msgid "Time Accounting"
@@ -944,7 +953,7 @@ msgstr "Időelszámolás"
 
 #. SysConfig
 msgid "Time Report"
-msgstr ""
+msgstr "Időjelentés"
 
 #. SysConfig
 msgid "Time accounting edit."
@@ -964,7 +973,7 @@ msgstr "Időelszámolás beállítások."
 
 #. SysConfig
 msgid "Time accounting ticket report."
-msgstr ""
+msgstr "Időelszámolás jegyjelentése."
 
 #. SysConfig
 msgid "Time accounting view."
@@ -987,21 +996,30 @@ msgid ""
 "Use Service as Action. Please add as key the timeacounting action and the "
 "service as value. RegEx are allowed."
 msgstr ""
+"Szolgáltatás használata műveletként. Adja hozzá a „timeacounting” műveletet "
+"kulcsként, a szolgáltatást pedig értékként. Reguláris kifejezések is "
+"megengedettek."
 
 #. SysConfig
 msgid ""
 "We need to set a default action id when we sync TimeUnits to the "
 "TimeAccounting module."
 msgstr ""
+"Be kell állítanunk egy alapértelmezett műveletazonosítót, ha időegységeket "
+"szinkronizálunk az időelszámolási modulba."
 
 #. SysConfig
 msgid ""
 "We need to set a default project id when we sync TimeUnits to the "
 "TimeAccounting module."
 msgstr ""
+"Be kell állítanunk egy alapértelmezett projektazonosítót, ha időegységeket "
+"szinkronizálunk az időelszámolási modulba."
 
 #. SysConfig
 msgid ""
 "We save the Article TimeUnit to a DynamicField from type \"Article\". Please "
 "add here the name of the field if the initinal name is changed."
 msgstr ""
+"Elmentjük a bejegyzés időegységét egy „bejegyzés” típusú dinamikus mezőbe. "
+"Itt adja hozzá a mező nevét, ha a kezdeti név megváltozott."
