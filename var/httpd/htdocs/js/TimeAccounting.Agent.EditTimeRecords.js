@@ -30,7 +30,7 @@ TimeAccounting.Agent.EditTimeRecords = (function (TargetNS) {
 
     // Adds option to a selection
     function AddSelectionOption($SelectionElement, OptionText, OptionValue, SelectedOption) {
-        var OptionHTML = Core.Template.Render(
+        var OptionHTML = Core.Template.Render(   // eslint-disable-line no-undef
             'Agent/TimeAccounting/Option',
             {
                 Value:    OptionValue,
@@ -52,8 +52,8 @@ TimeAccounting.Agent.EditTimeRecords = (function (TargetNS) {
      */
     TargetNS.FillActionList = function (WorkingUnitID) {
         var ProjectName = $('#ProjectID' + WorkingUnitID + ' option:selected').text(),
-            ActionList = Core.Config.Get('ActionList'),
-            ActionListConstraints = Core.Config.Get('ActionListConstraints'),
+            ActionList = Core.Config.Get('ActionList'),   // eslint-disable-line no-undef
+            ActionListConstraints = Core.Config.Get('ActionListConstraints'),   // eslint-disable-line no-undef
             $ActionSelection = $("#ActionID" + WorkingUnitID),
             SelectedActionID = $ActionSelection.val(),
             OptionCount = 0;
@@ -97,7 +97,7 @@ TimeAccounting.Agent.EditTimeRecords = (function (TargetNS) {
                 $NewRow, NewRowHTML,
                 RecordNumber = parseInt($('#RecordsNumber').val(), 10) + 1;
 
-            Core.UI.InputFields.Deactivate($('.WorkingHours'));
+            Core.UI.InputFields.Deactivate($('.WorkingHours'));   // eslint-disable-line no-undef
             $NewRow = $LastRow.clone();
             NewRowHTML = $NewRow.html();
 
@@ -138,7 +138,7 @@ TimeAccounting.Agent.EditTimeRecords = (function (TargetNS) {
             InitPeriodCalculation();
 
             // Modernize fields
-            Core.UI.InputFields.Activate($('.WorkingHours'));
+            Core.UI.InputFields.Activate($('.WorkingHours'));   // eslint-disable-line no-undef
         });
     }
 
@@ -166,11 +166,9 @@ TimeAccounting.Agent.EditTimeRecords = (function (TargetNS) {
            if (FieldValue.match(/^[0-9.+\- ]+$/)) {
                // Calculation
                try {
-                   /*eslint-disable no-eval */
                    FieldValue = eval(FieldValue);
-                   /*eslint-enable no-eval */
                }
-               catch (CalcError) {
+               catch {
                    FieldValue = 0;
                }
 
@@ -245,14 +243,14 @@ TimeAccounting.Agent.EditTimeRecords = (function (TargetNS) {
      */
     TargetNS.Init = function () {
 
-        var RemarkRegExpContent = Core.Config.Get('RemarkRegExpContent'),
+        var RemarkRegExpContent = Core.Config.Get('RemarkRegExpContent'),   // eslint-disable-line no-undef
             // Add some special validation methods for the edit screen
             // Define all available elements (only the prefixes) in a row
             ElementPrefixes = ['ProjectID', 'ActionID', 'Remark', 'StartTime', 'EndTime', 'Period'],
             Checked;
 
         // Validates the project: if some other field in this row is filled, the project select must be filled, too
-        Core.Form.Validate.AddMethod('Validate_TimeAccounting_Project', function (Value, Element) {
+        Core.Form.Validate.AddMethod('Validate_TimeAccounting_Project', function (Value, Element) {   // eslint-disable-line no-undef
             var ID,
                 Mode = $(Element).attr('id').indexOf('Append') != -1 ? 'Append' : '',
                 Result = true;
@@ -281,14 +279,14 @@ TimeAccounting.Agent.EditTimeRecords = (function (TargetNS) {
             return Result;
         });
 
-        Core.Form.Validate.AddRule('Validate_TimeAccounting_Project', {
+        Core.Form.Validate.AddRule('Validate_TimeAccounting_Project', {   // eslint-disable-line no-undef
             /*eslint-disable camelcase */
             Validate_TimeAccounting_Project: true
             /*eslint-enable camelcase */
         });
 
         // Validates the remarks: depending on the project, remarks must be entered or not
-        Core.Form.Validate.AddMethod('Validate_TimeAccounting_Remark', function (Value, Element) {
+        Core.Form.Validate.AddMethod('Validate_TimeAccounting_Remark', function (Value, Element) {   // eslint-disable-line no-undef
             var Mode = $(Element).attr('id').indexOf('Append') != -1 ? 'Append' : '',
                 ID = $(Element).attr('id').replace(Mode + 'Remark', ''),
                 RemarkRegExp = new RegExp("^(" + RemarkRegExpContent + ")$"),
@@ -302,14 +300,14 @@ TimeAccounting.Agent.EditTimeRecords = (function (TargetNS) {
             return true;
         });
 
-        Core.Form.Validate.AddRule('Validate_TimeAccounting_Remark', {
+        Core.Form.Validate.AddRule('Validate_TimeAccounting_Remark', {   // eslint-disable-line no-undef
             /*eslint-disable camelcase */
             Validate_TimeAccounting_Remark: true
             /*eslint-enable camelcase */
         });
 
         // Validates the start time: if a project is given and no time period is given, this field is required
-        Core.Form.Validate.AddMethod('Validate_TimeAccounting_StartTime', function (Value, Element) {
+        Core.Form.Validate.AddMethod('Validate_TimeAccounting_StartTime', function (Value, Element) {   // eslint-disable-line no-undef
             var Mode = $(Element).attr('id').indexOf('Append') != -1 ? 'Append' : '',
                 ID = $(Element).attr('id').replace(Mode + 'StartTime', '');
 
@@ -321,14 +319,14 @@ TimeAccounting.Agent.EditTimeRecords = (function (TargetNS) {
             return true;
         });
 
-        Core.Form.Validate.AddRule('Validate_TimeAccounting_StartTime', {
+        Core.Form.Validate.AddRule('Validate_TimeAccounting_StartTime', {   // eslint-disable-line no-undef
             /*eslint-disable camelcase */
             Validate_TimeAccounting_StartTime: true
             /*eslint-enable camelcase */
         });
 
         // Validates the time period: if a project is given and no start time is given, this field is required
-        Core.Form.Validate.AddMethod('Validate_TimeAccounting_Period', function (Value, Element) {
+        Core.Form.Validate.AddMethod('Validate_TimeAccounting_Period', function (Value, Element) {   // eslint-disable-line no-undef
             var Mode = $(Element).attr('id').indexOf('Append') != -1 ? 'Append' : '',
                 ID = $(Element).attr('id').replace(Mode + 'Period', '');
 
@@ -339,7 +337,7 @@ TimeAccounting.Agent.EditTimeRecords = (function (TargetNS) {
             return true;
         });
 
-        Core.Form.Validate.AddRule('Validate_TimeAccounting_Period', {
+        Core.Form.Validate.AddRule('Validate_TimeAccounting_Period', {   // eslint-disable-line no-undef
             /*eslint-disable camelcase */
             Validate_TimeAccounting_Period: true
             /*eslint-enable camelcase */
@@ -377,21 +375,21 @@ TimeAccounting.Agent.EditTimeRecords = (function (TargetNS) {
             var $WorkingDayCheckboxes = $('.IncompleteWorkingDays tbody input:checkbox:checked').filter('[name!=IncompleteWorkingDay-All]');
 
             if (!$WorkingDayCheckboxes.length) {
-                alert(Core.Language.Translate('Please choose at least one day!'));
+                alert(Core.Language.Translate('Please choose at least one day!'));   // eslint-disable-line no-undef
                 return false;
             }
 
             // Show overlay
-            Core.UI.Dialog.ShowContentDialog($('#MassEntryConfirmDialog'), Core.Language.Translate('Mass Entry'), '150px', 'Center', true, [
+            Core.UI.Dialog.ShowContentDialog($('#MassEntryConfirmDialog'), Core.Language.Translate('Mass Entry'), '150px', 'Center', true, [   // eslint-disable-line no-undef
                 {
-                    Label: Core.Language.Translate('Submit'),
+                    Label: Core.Language.Translate('Submit'),   // eslint-disable-line no-undef
                     Function: function () {
                         var $SelectedRadio = $('#MassEntryConfirmRadio li input:radio:checked'),
                             AbsenceReason,
                             CollectedDates = '';
 
                         if (!$SelectedRadio.length) {
-                            alert(Core.Language.Translate('Please choose a reason for absence!'));
+                            alert(Core.Language.Translate('Please choose a reason for absence!'));   // eslint-disable-line no-undef
                             return false;
                         }
 
@@ -424,7 +422,7 @@ TimeAccounting.Agent.EditTimeRecords = (function (TargetNS) {
                         .find('.InnerContent')
                         .width($('.Dialog:visible').find('.InnerContent').width())
                         .empty()
-                        .append(Core.Template.Render('Agent/TimeAccounting/Dialog/AjaxLoader'));
+                        .append(Core.Template.Render('Agent/TimeAccounting/Dialog/AjaxLoader'));   // eslint-disable-line no-undef
 
                         // Submit form
                         $('#MassEntry').submit();
@@ -432,9 +430,9 @@ TimeAccounting.Agent.EditTimeRecords = (function (TargetNS) {
                     Class: 'Primary'
                 },
                 {
-                    Label: Core.Language.Translate('Cancel'),
+                    Label: Core.Language.Translate('Cancel'),   // eslint-disable-line no-undef
                     Function: function () {
-                        Core.UI.Dialog.CloseDialog($('.Dialog:visible'));
+                        Core.UI.Dialog.CloseDialog($('.Dialog:visible'));   // eslint-disable-line no-undef
                     }
                 }
             ]);
@@ -442,7 +440,7 @@ TimeAccounting.Agent.EditTimeRecords = (function (TargetNS) {
         });
     };
 
-    Core.Init.RegisterNamespace(TargetNS, 'APP_MODULE');
+    Core.Init.RegisterNamespace(TargetNS, 'APP_MODULE');   // eslint-disable-line no-undef
 
     return TargetNS;
 }(TimeAccounting.Agent.EditTimeRecords || {}));

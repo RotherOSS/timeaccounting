@@ -28,7 +28,7 @@ TimeAccounting.Agent = (function (TargetNS) {
 
     TargetNS.Init = function () {
 
-        Core.UI.Table.InitTableFilter($('.FilterBox'), $('.DataTable'));
+        Core.UI.Table.InitTableFilter($('.FilterBox'), $('.DataTable'));   // eslint-disable-line no-undef
 
         TimeAccounting.Agent.EditTimeRecords.MassEntryInit();
 
@@ -54,38 +54,38 @@ TimeAccounting.Agent = (function (TargetNS) {
         $('#IncompleteWorkingDaysList').off('change.IncompleteWorkingDays').on('change.IncompleteWorkingDays', function () {
             var Date = $(this).val().split('-');
             if (Date[0] && Date[1] && Date[2]) {
-                location.href = Core.Config.Get('Baselink') + "Action=" + Core.Config.Get('Action') + ";Year=" + Date[0] + ";Month=" + Date[1] + ";Day=" + Date[2];
+                location.href = Core.Config.Get('Baselink') + "Action=" + Core.Config.Get('Action') + ";Year=" + Date[0] + ";Month=" + Date[1] + ";Day=" + Date[2];   // eslint-disable-line no-undef
             }
         });
 
         TimeAccounting.Agent.ConfirmationDialog.BindConfirmationDialog({
             ElementID:                  'DeleteTimeAccountingEntry',
             ElementSelector:            '#DeleteTimeAccountingEntry',
-            DialogContentQueryString:   'Action=AgentTimeAccountingEdit;DeleteDialog=1;Year=' + Core.Config.Get('Year') + ';Month=' + Core.Config.Get('Month') + ';Day=' + Core.Config.Get('Day'),
-            ConfirmedActionQueryString: 'Action=AgentTimeAccountingEdit;Subaction=Delete;Year=' + Core.Config.Get('Year') + ';Month=' + Core.Config.Get('Month') + ';Day=' + Core.Config.Get('Day'),
-            DialogTitle:                Core.Language.Translate("Delete Time Accounting Entry"),
+            DialogContentQueryString:   'Action=AgentTimeAccountingEdit;DeleteDialog=1;Year=' + Core.Config.Get('Year') + ';Month=' + Core.Config.Get('Month') + ';Day=' + Core.Config.Get('Day'),   // eslint-disable-line no-undef
+            ConfirmedActionQueryString: 'Action=AgentTimeAccountingEdit;Subaction=Delete;Year=' + Core.Config.Get('Year') + ';Month=' + Core.Config.Get('Month') + ';Day=' + Core.Config.Get('Day'),   // eslint-disable-line no-undef
+            DialogTitle:                Core.Language.Translate("Delete Time Accounting Entry"),   // eslint-disable-line no-undef
             TranslatedText:             {
-                Yes: Core.Language.Translate('Yes'),
-                No:  Core.Language.Translate('No')
+                Yes: Core.Language.Translate('Yes'),   // eslint-disable-line no-undef
+                No:  Core.Language.Translate('No')   // eslint-disable-line no-undef
             }
         });
 
         // show the confirmation dialog to confirm the action
-        if (Core.Config.Get('BlockName')) {
-            Core.UI.Dialog.ShowContentDialog(
-                Core.Config.Get('BlockName'),
-                Core.Language.Translate("Confirm insert"),
+        if (Core.Config.Get('BlockName')) {   // eslint-disable-line no-undef
+            Core.UI.Dialog.ShowContentDialog(   // eslint-disable-line no-undef
+                Core.Config.Get('BlockName'),   // eslint-disable-line no-undef
+                Core.Language.Translate("Confirm insert"),   // eslint-disable-line no-undef
                 '20%',
                 'Center',
                 true,
                 [
                     {
-                        Label: Core.Language.Translate('Yes'),
+                        Label: Core.Language.Translate('Yes'),   // eslint-disable-line no-undef
                         Class: "Primary",
                         Type: "Close",
                     },
                     {
-                        Label: Core.Language.Translate('No'),
+                        Label: Core.Language.Translate('No'),   // eslint-disable-line no-undef
 
                         // define the function that is called when the 'No' button is pressed
                         Function: function(){
@@ -94,7 +94,7 @@ TimeAccounting.Agent = (function (TargetNS) {
                             $('div.Dialog:visible div.ContentFooter button').attr('disabled', 'disabled');
 
                             // redirect to the module that deletes the saved entry after pressing the No button
-                            location.href = Core.Config.Get('Baselink') + 'Action=AgentTimeAccountingEdit;Subaction=Delete;Year=' +  Core.Config.Get('Year') + ';Month=' +  Core.Config.Get('Month') + ';Day=' +  Core.Config.Get('Day');
+                            location.href = Core.Config.Get('Baselink') + 'Action=AgentTimeAccountingEdit;Subaction=Delete;Year=' +  Core.Config.Get('Year') + ';Month=' +  Core.Config.Get('Month') + ';Day=' +  Core.Config.Get('Day');   // eslint-disable-line no-undef
                         }
                     }
                 ]
@@ -112,11 +112,9 @@ TimeAccounting.Agent = (function (TargetNS) {
            if (FieldValue.match(/^[0-9.+\- ]+$/)) {
                // Calculation
                try {
-                   /*eslint-disable no-eval */
                    FieldValue = eval(FieldValue);
-                   /*eslint-enable no-eval */
                }
-               catch (CalcError) {
+               catch {
                    FieldValue = 0;
                }
 
@@ -129,7 +127,7 @@ TimeAccounting.Agent = (function (TargetNS) {
         });
     };
 
-    Core.Init.RegisterNamespace(TargetNS, 'APP_MODULE');
+    Core.Init.RegisterNamespace(TargetNS, 'APP_MODULE');   // eslint-disable-line no-undef
 
     return TargetNS;
 

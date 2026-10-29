@@ -2,7 +2,7 @@
 # OTOBO is a web-based ticketing system for service organisations.
 # --
 # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
-# Copyright (C) 2019-2024 Rother OSS GmbH, https://otobo.de/
+# Copyright (C) 2019-2026 Rother OSS GmbH, https://otobo.io/
 # --
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -153,7 +153,7 @@ sub Run {
 
     my %Action  = $TimeAccountingObject->ActionSettingsGet();
     my %Project = $TimeAccountingObject->ProjectSettingsGet();
-    $Param{Project} = $Project{Project}->{ $ProjectID };
+    $Param{Project} = $Project{Project}->{$ProjectID};
 
     # get system users
     my %ShownUsers = $UserObject->UserList(
@@ -176,7 +176,7 @@ sub Run {
     my ( $Sec, $Min, $Hour, $CurrentDay, $Month, $Year ) = $TimeAccountingObject->SystemTime2Date(
         SystemTime => $DateTimeObjectCurrent->ToEpoch(),
     );
-    %ProjectData    = ();
+    %ProjectData = ();
     my %ProjectTime = ();
 
     my @UserWhiteList;
@@ -192,9 +192,9 @@ sub Run {
             UserID   => $UserID,
             TicketID => $Ticket{TicketID},
         );
-        if ( $ProjectData{ $ProjectID } ) {
+        if ( $ProjectData{$ProjectID} ) {
             my $UserTotalHoursInProject;
-            my $ActionsRef = $ProjectData{ $ProjectID }->{Actions};
+            my $ActionsRef = $ProjectData{$ProjectID}->{Actions};
             for my $ActionID ( sort keys %{$ActionsRef} ) {
                 $ProjectTime{$ActionID}->{$UserID}->{Hours} = $ActionsRef->{$ActionID}->{Total};
 

@@ -38,7 +38,7 @@ TimeAccounting.Agent.Overview = (function (TargetNS) {
         });
     };
 
-    Core.Init.RegisterNamespace(TargetNS, 'APP_MODULE');
+    Core.Init.RegisterNamespace(TargetNS, 'APP_MODULE');   // eslint-disable-line no-undef
 
     return TargetNS;
 

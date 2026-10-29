@@ -604,6 +604,8 @@ sub _MigratePermissions {
     return 1;
 }
 
+1;
+
 =head1 TERMS AND CONDITIONS
 
 This software is part of the OTOBO project (L<https://otobo.org/>).

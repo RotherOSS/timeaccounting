@@ -1876,7 +1876,6 @@ sub ProjectTotalHours {
     # get database object
     my $DBObject = $Kernel::OM->Get('Kernel::System::DB');
 
-
     my $SQL = 'SELECT SUM(period) FROM time_accounting_table WHERE project_id = ?';
 
     my @Bind = ( \$Param{ProjectID} );
@@ -1978,7 +1977,7 @@ sub ProjectHistory {
         push @Bind, \$Param{TicketID};
     }
 
-    $SQL .= ' ORDER BY time_start',
+    $SQL .= ' ORDER BY time_start';
 
     # ask the database
     $DBObject->Prepare(
