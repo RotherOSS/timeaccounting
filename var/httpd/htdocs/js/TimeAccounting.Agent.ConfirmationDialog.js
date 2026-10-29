@@ -2,7 +2,7 @@
 // OTOBO is a web-based ticketing system for service organisations.
 // --
 // Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
-// Copyright (C) 2019-2024 Rother OSS GmbH, https://otobo.de/
+// Copyright (C) 2019-2026 Rother OSS GmbH, https://otobo.io/
 // --
 // This program is free software: you can redistribute it and/or modify it under
 // the terms of the GNU General Public License as published by the Free Software
@@ -48,7 +48,7 @@ TimeAccounting.Agent.ConfirmationDialog = (function (TargetNS) {
      * @description Shows waiting dialog until search screen is ready.
      */
     function ShowWaitingDialog(PositionTop){
-        Core.UI.Dialog.ShowContentDialog('<div class="Spacing Center"><span class="AJAXLoader" title="' + Core.Config.Get('LoadingMsg') + '"></span></div>', '', PositionTop, 'Center', true);
+        Core.UI.Dialog.ShowContentDialog('<div class="Spacing Center"><span class="AJAXLoader" title="' + Core.Config.Get('LoadingMsg') + '"></span></div>', '', PositionTop, 'Center', true);   // eslint-disable-line no-undef
     }
 
     /**
@@ -78,7 +78,7 @@ TimeAccounting.Agent.ConfirmationDialog = (function (TargetNS) {
 
         // ajax call to the module that executes the action when pressing the confirmation button
         Data = LocalDialogData.DialogContentQueryString;
-        Core.AJAX.FunctionCall(Core.Config.Get('Baselink'), Data, function (Response) {
+        Core.AJAX.FunctionCall(Core.Config.Get('Baselink'), Data, function (Response) {   // eslint-disable-line no-undef
 
             // 'Confirmation' opens a dialog with 2 buttons: Yes and No
             if (Response.DialogType === 'Confirmation') {
@@ -95,7 +95,7 @@ TimeAccounting.Agent.ConfirmationDialog = (function (TargetNS) {
                         $('div.Dialog:visible div.ContentFooter button').attr('disabled', 'disabled');
 
                         // redirect to the module that does the confirmed action after pressing the Yes button
-                        location.href = Core.Config.Get('Baselink') + LocalDialogData.ConfirmedActionQueryString;
+                        location.href = Core.Config.Get('Baselink') + LocalDialogData.ConfirmedActionQueryString;   // eslint-disable-line no-undef
                     }
                 }, {
                     Label: LocalDialogData.TranslatedText.No,
@@ -115,7 +115,7 @@ TimeAccounting.Agent.ConfirmationDialog = (function (TargetNS) {
             }
 
             // show the confirmation dialog to confirm the action
-            Core.UI.Dialog.ShowContentDialog(Response.HTML, LocalDialogData.DialogTitle, PositionTop, "Center", true, Buttons);
+            Core.UI.Dialog.ShowContentDialog(Response.HTML, LocalDialogData.DialogTitle, PositionTop, "Center", true, Buttons);   // eslint-disable-line no-undef
         }, 'json');
         return false;
     };
