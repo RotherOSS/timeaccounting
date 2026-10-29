@@ -37,6 +37,13 @@ Setup
 Configuration Reference
 -----------------------
 
+Core::Event::Ticket
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Ticket::EventModulePost###999-TimeAccountingTicketTimeUnitsSync
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Every time a agent add TimeUnits to a ticket, we sync the information to the timeaccounting module.
+
 Core::Stats
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -46,10 +53,6 @@ Determines if the statistics module may generate time accounting information.
 
 Core::Ticket
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Ticket::EventModulePost###999-TimeAccountingTicketTimeUnitsSync
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Every time a agent add TimeUnits to a ticket, we sync the information to the timeaccounting module.
 
 TimeAccounting::TicketSync::ServiceToAction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -92,6 +95,14 @@ Also synchronise customers as a new project if they have not yet been created in
 TimeAccounting::TicketSync::SaveTimeUnitToArticleField
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 We save the Article TimeUnit to a DynamicField from type "Article". Please add here the name of the field if the initinal name is changed.
+
+TimeAccounting::TicketSync::DefaultProjectID
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+We need to set a default project id when we sync TimeUnits to the TimeAccounting module.
+
+TimeAccounting::TicketSync::DefaultActionID
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+We need to set a default action id when we sync TimeUnits to the TimeAccounting module.
 
 Core::TimeAccounting::ViewReportingProject
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -175,17 +186,6 @@ Main menu item registration.
 Frontend::Navigation###AgentTimeAccountingView###002-TimeAccounting
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Main menu item registration.
-
-Frontend::Agent::Ticket::ViewActivityRecording
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-TimeAccounting::TicketSync::DefaultProjectID
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-We need to set a default project id when we sync TimeUnits to the TimeAccounting module.
-
-TimeAccounting::TicketSync::DefaultActionID
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-We need to set a default action id when we sync TimeUnits to the TimeAccounting module.
 
 Frontend::Agent::ToolBar
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
