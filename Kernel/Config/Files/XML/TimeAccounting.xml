@@ -619,14 +619,14 @@
     </Setting>
     <Setting Name="TimeAccounting::TicketSync::DefaultProjectID" Required="0" Valid="1">
         <Description Translatable="1">We need to set a default project ID when we sync time units to the time accounting module.</Description>
-        <Navigation>Frontend::Agent::View::ActivityRecording</Navigation>
+        <Navigation>Core::TimeAccounting::TicketSync</Navigation>
         <Value>
             <Item ValueType="String" ValueRegex="^\d+$">5</Item>
         </Value>
     </Setting>
     <Setting Name="TimeAccounting::TicketSync::DefaultActionID" Required="0" Valid="1">
         <Description Translatable="1">We need to set a default action ID when we sync time units to the time accounting module.</Description>
-        <Navigation>Frontend::Agent::View::ActivityRecording</Navigation>
+        <Navigation>Core::TimeAccounting::TicketSync</Navigation>
         <Value>
             <Item ValueType="String" ValueRegex="^\d+$">4</Item>
         </Value>

@@ -24,16 +24,16 @@ sub Data {
     my $Self = shift;
 
     # Template: AgentTicketAccountTime
-    $Self->{Translation}->{'Add Time Accounting'} = '';
-    $Self->{Translation}->{'The date must be valid and not later than today!'} = '';
+    $Self->{Translation}->{'Add Time Accounting'} = 'Időelszámolás hozzáadása';
+    $Self->{Translation}->{'The date must be valid and not later than today!'} = 'A dátumnak érvényesnek kell lennie, és nem lehet későbbi a mai napnál!';
     $Self->{Translation}->{'Task'} = 'Feladat';
     $Self->{Translation}->{'Remark'} = 'Észrevétel';
-    $Self->{Translation}->{'Start time'} = '';
-    $Self->{Translation}->{'End time'} = '';
+    $Self->{Translation}->{'Start time'} = 'Kezdési idő';
+    $Self->{Translation}->{'End time'} = 'Befejezési idő';
     $Self->{Translation}->{'You must enter a start and an end time, or a positive period of up to 24 hours.'} =
-        '';
+        'Meg kell adnia egy kezdési és egy befejezési időt, vagy egy legfeljebb 24 órás pozitív időszakot.';
     $Self->{Translation}->{'The time period must be given in hours and can be a decimal number.'} =
-        '';
+        'Az időszakot órában kell megadni, és lehet tizedes szám is.';
 
     # Template: AgentTimeAccountingDelete
     $Self->{Translation}->{'Do you really want to delete the Time Accounting of this day?'} =
@@ -54,9 +54,9 @@ sub Data {
     $Self->{Translation}->{'Required fields are marked with a "*".'} = 'A kötelező mezők „*” jellel vannak megjelölve.';
     $Self->{Translation}->{'You have to fill in start and end time or a time period.'} = 'Ki kell töltenie a kezdő és befejező időt vagy egy időszakot.';
     $Self->{Translation}->{'Project'} = 'Projekt';
-    $Self->{Translation}->{'Origin'} = '';
+    $Self->{Translation}->{'Origin'} = 'Eredet';
     $Self->{Translation}->{'Please add a remark with more than 8 characters!'} = 'Adjon hozzá egy 8 karakternél hosszabb észrevételt!';
-    $Self->{Translation}->{'Ursprung'} = '';
+    $Self->{Translation}->{'Ursprung'} = 'Eredet';
     $Self->{Translation}->{'Negative times are not allowed.'} = 'Negatív időpontok nem engedélyezettek.';
     $Self->{Translation}->{'Repeated hours are not allowed. Start time matches another interval.'} =
         'Az ismétlődő órák nem engedélyezettek. A kezdési idő egy másik időközre illeszkedik.';
@@ -69,7 +69,7 @@ sub Data {
     $Self->{Translation}->{'Invalid period! A day has only 24 hours.'} = 'Érvénytelen időszak! Egy napnak csak 24 órája van.';
     $Self->{Translation}->{'A valid period must be greater than zero.'} = 'Egy érvényes időszaknak nagyobbnak kell lennie nullánál.';
     $Self->{Translation}->{'Invalid period! Negative periods are not allowed.'} = 'Érvénytelen időszak! Negatív időszakok nem engedélyezettek.';
-    $Self->{Translation}->{'Submit changes'} = '';
+    $Self->{Translation}->{'Submit changes'} = 'Változtatások elküldése';
     $Self->{Translation}->{'Add one row'} = 'Egy sor hozzáadása';
     $Self->{Translation}->{'You can only select one checkbox element!'} = 'Csak egy jelölőnégyzet elemet választhat ki!';
     $Self->{Translation}->{'Are you sure that you worked while you were on sick leave?'} = 'Biztos benne, hogy dolgozott, mialatt betegszabadságon volt?';
@@ -123,8 +123,8 @@ sub Data {
         'Jelenleg minden időelszámoló felhasználó meg van jelenítve. A működés módosításához frissítse a beállítást:';
 
     # Template: AgentTimeAccountingReportingTicket
-    $Self->{Translation}->{'Ticket report'} = '';
-    $Self->{Translation}->{'Go to ticket'} = '';
+    $Self->{Translation}->{'Ticket report'} = 'Jegyjelentés';
+    $Self->{Translation}->{'Go to ticket'} = 'Ugrás a jegyhez';
 
     # Template: AgentTimeAccountingSetting
     $Self->{Translation}->{'Edit Time Accounting Project Settings'} = 'Időelszámolás projektbeállítások szerkesztése';
@@ -136,7 +136,7 @@ sub Data {
         'Már létezik egy ilyen nevű projekt. Válasszon egy másik nevet.';
     $Self->{Translation}->{'Edit Time Accounting Settings'} = 'Időelszámolási beállítások szerkesztése';
     $Self->{Translation}->{'Add task'} = 'Feladat hozzáadása';
-    $Self->{Translation}->{'Add a user to time accounting.'} = '';
+    $Self->{Translation}->{'Add a user to time accounting.'} = 'Felhasználó hozzáadása az időelszámoláshoz.';
     $Self->{Translation}->{'Filter for projects, tasks or users'} = 'Szűrő a projektkehez, feladatokhoz vagy felhasználókhoz';
     $Self->{Translation}->{'Time periods can not be deleted.'} = 'Az időszakok nem törölhetők.';
     $Self->{Translation}->{'Project List'} = 'Projektlista';
@@ -163,7 +163,7 @@ sub Data {
     $Self->{Translation}->{'Days of Vacation'} = 'Szabadság napjai';
     $Self->{Translation}->{'Hours per Week'} = 'Órák hetente';
     $Self->{Translation}->{'Authorized Overtime'} = 'Jogosult túlóra';
-    $Self->{Translation}->{'Start Date'} = 'Kezdési dátum';
+    $Self->{Translation}->{'Start Date'} = 'Kezdődátum';
     $Self->{Translation}->{'Please insert a valid date.'} = 'Érvényes dátumot illesszen be.';
     $Self->{Translation}->{'End Date'} = 'Befejezési dátum';
     $Self->{Translation}->{'Period end must be after period begin.'} = 'Az időszak végének az időszak kezdete után kell lennie.';
@@ -200,13 +200,13 @@ sub Data {
     $Self->{Translation}->{'All Projects'} = 'Minden projekt';
 
     # Perl Module: Kernel/Modules/AgentTimeAccountingReporting.pm
-    $Self->{Translation}->{'ReportingProject: Need ProjectID'} = 'Jelentés projekt: projektazonosító szükséges';
-    $Self->{Translation}->{'Reporting Project'} = 'Jelentés projekt';
-    $Self->{Translation}->{'Reporting'} = 'Jelentés';
+    $Self->{Translation}->{'ReportingProject: Need ProjectID'} = 'Jelentéskészítési projekt: projektazonosító szükséges';
+    $Self->{Translation}->{'Reporting Project'} = 'Jelentéskészítési projekt';
+    $Self->{Translation}->{'Reporting'} = 'Jelentéskészítés';
 
     # Perl Module: Kernel/Modules/AgentTimeAccountingReportingTicket.pm
-    $Self->{Translation}->{'ReportingProject: Need TicketID'} = '';
-    $Self->{Translation}->{'ReportingProject: No Project for Ticket found.'} = '';
+    $Self->{Translation}->{'ReportingProject: Need TicketID'} = 'Jelentéskészítési projekt: jegyazonosító szükséges';
+    $Self->{Translation}->{'ReportingProject: No Project for Ticket found.'} = 'Jelentéskészítési projekt: nem található projekt a jegyhez.';
 
     # Perl Module: Kernel/Modules/AgentTimeAccountingSetting.pm
     $Self->{Translation}->{'Unable to update user settings!'} = 'Nem lehet frissíteni a felhasználói beállításokat!';
@@ -243,14 +243,14 @@ sub Data {
 
     # SysConfig
     $Self->{Translation}->{'Activate the synchronisation of Ticket-TimeUnits into the TimeAccounting module.'} =
-        '';
+        'A jegy időegységei szinkronizálásának aktiválása az időelszámolási modulba.';
     $Self->{Translation}->{'Agent interface notification module to see the number of incomplete working days for the user.'} =
         'Ügyintézői felület értesítési modul a felhasználó befejezetlen munkanapjai számának megtekintéséhez.';
     $Self->{Translation}->{'Also synchronise customers as a new project if they have not yet been created in the customer database.'} =
-        '';
+        'Szinkronizálja az ügyfeleket is új projektként, ha még nem lettek létrehozva az ügyféladatbázisban.';
     $Self->{Translation}->{'As soon as the synchronisation of ticket TimeUnits is activated, it is possible to set the entries ReadOnly.'} =
-        '';
-    $Self->{Translation}->{'Create a new time accounting entry related to the ticket'} = '';
+        'Amint a jegy időegységeinek szinkronizálása aktiválásra kerül, lehetőség van a bejegyzések csak olvashatóként való beállítására.';
+    $Self->{Translation}->{'Create a new time accounting entry related to the ticket'} = 'A jegyhez kapcsolódó új időelszámolási bejegyzés létrehozása';
     $Self->{Translation}->{'Default name for new actions.'} = 'Alapértelmezett név az új műveletekhez.';
     $Self->{Translation}->{'Default name for new projects.'} = 'Alapértelmezett név az új projektekhez.';
     $Self->{Translation}->{'Default setting for date end.'} = 'Alapértelmezett beállítás a befejezési dátumhoz.';
@@ -269,7 +269,7 @@ sub Data {
     $Self->{Translation}->{'Edit time accounting settings.'} = 'Időelszámolás beállításainak szerkesztése.';
     $Self->{Translation}->{'Edit time record.'} = 'Időfeljegyzés szerkesztése.';
     $Self->{Translation}->{'Every time a agent add TimeUnits to a ticket, we sync the information to the timeaccounting module.'} =
-        '';
+        'Valahányszor egy ügyintéző időegységeket ad hozzá egy jegyhez, szinkronizáljuk az információkat az időelszámolási modullal.';
     $Self->{Translation}->{'For how many days ago you can insert working units.'} = 'Hány nappal ezelőtthöz illeszthet be munkaegységeket.';
     $Self->{Translation}->{'If enabled, only users that has added working time to the selected project are shown.'} =
         'Ha engedélyezve van, akkor csak azok a felhasználók lesznek megjelenítve, akik munkaidőt adtak hozzá a kijelölt projekthez.';
@@ -291,34 +291,34 @@ sub Data {
         'Reguláris kifejezések a kijelölt projekt szerinti korlátozó művelet listájához. A kulcs a projektekhez tartalmaz reguláris kifejezést, a tartalom pedig a műveletekhez.';
     $Self->{Translation}->{'Regular expressions for constraining project list according to user groups. Key contains regular expression for project(s), content contains comma separated list of groups.'} =
         'Reguláris kifejezések a felhasználócsoportok szerinti korlátozó projekt listájához. A kulcs a projektekhez tartalmaz reguláris kifejezést, a tartalom pedig csoportok vesszővel elválasztott listáját tartalmazza.';
-    $Self->{Translation}->{'Show accounted times for this ticket'} = '';
+    $Self->{Translation}->{'Show accounted times for this ticket'} = 'Elszámolt idők megjelenítése ennél a jegynél';
     $Self->{Translation}->{'Specifies if working hours can be inserted without start and end times.'} =
         'Megadja, hogy a munkaidő beszúrható-e kezdési és befejezési idők nélkül.';
     $Self->{Translation}->{'Synchronise customers as a new project if they exists in the customer database.'} =
-        '';
+        'Ügyfelek szinkronizálása új projektként, ha léteznek az ügyféladatbázisban.';
     $Self->{Translation}->{'This module forces inserts in TimeAccounting.'} = 'Ez a modul kikényszeríti a beszúrásokat az időelszámolásban.';
     $Self->{Translation}->{'This notification module gives a warning if there are too many incomplete working days.'} =
         'Ez az értesítési modul egy figyelmeztetést ad, ha túl sok befejezetlen munkanap található.';
-    $Self->{Translation}->{'Ticket time report'} = '';
+    $Self->{Translation}->{'Ticket time report'} = 'Jegy időjelentése';
     $Self->{Translation}->{'Time Accounting'} = 'Időelszámolás';
-    $Self->{Translation}->{'Time Report'} = '';
+    $Self->{Translation}->{'Time Report'} = 'Időjelentés';
     $Self->{Translation}->{'Time accounting edit.'} = 'Időelszámolás szerkesztés.';
     $Self->{Translation}->{'Time accounting overview.'} = 'Időelszámolás áttekintő.';
     $Self->{Translation}->{'Time accounting reporting.'} = 'Időelszámolás jelentés.';
     $Self->{Translation}->{'Time accounting settings.'} = 'Időelszámolás beállítások.';
-    $Self->{Translation}->{'Time accounting ticket report.'} = '';
+    $Self->{Translation}->{'Time accounting ticket report.'} = 'Időelszámolás jegyjelentése.';
     $Self->{Translation}->{'Time accounting view.'} = 'Időelszámolás nézet.';
     $Self->{Translation}->{'Time accounting.'} = 'Időelszámolás.';
     $Self->{Translation}->{'To use if some actions reduced the working hours (for example, if only half of the traveling time is paid Key => traveling; Content => 50).'} =
         'Akkor kell használni, ha néhány művelet csökkentette a munkaidőt (például ha csak az utazási idő fele van kifizetve: Kulcs => utazás; Tartalom => 50).';
     $Self->{Translation}->{'Use Service as Action. Please add as key the timeacounting action and the service as value. RegEx are allowed.'} =
-        '';
+        'Szolgáltatás használata műveletként. Adja hozzá a „timeacounting” műveletet kulcsként, a szolgáltatást pedig értékként. Reguláris kifejezések is megengedettek.';
     $Self->{Translation}->{'We need to set a default action id when we sync TimeUnits to the TimeAccounting module.'} =
-        '';
+        'Be kell állítanunk egy alapértelmezett műveletazonosítót, ha időegységeket szinkronizálunk az időelszámolási modulba.';
     $Self->{Translation}->{'We need to set a default project id when we sync TimeUnits to the TimeAccounting module.'} =
-        '';
+        'Be kell állítanunk egy alapértelmezett projektazonosítót, ha időegységeket szinkronizálunk az időelszámolási modulba.';
     $Self->{Translation}->{'We save the Article TimeUnit to a DynamicField from type "Article". Please add here the name of the field if the initinal name is changed.'} =
-        '';
+        'Elmentjük a bejegyzés időegységét egy „bejegyzés” típusú dinamikus mezőbe. Itt adja hozzá a mező nevét, ha a kezdeti név megváltozott.';
 
 
     push @{ $Self->{JavaScriptStrings} // [] }, (
