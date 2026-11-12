@@ -78,7 +78,7 @@ sub Run {
     # check needed params
     if ( !$Param{TicketID} ) {
         return $LayoutObject->ErrorScreen(
-            Message => Translatable('ReportingProject: Need TicketID')
+            Message => Translatable('Reporting project: need ticket ID.')
         );
     }
 
@@ -147,7 +147,7 @@ sub Run {
     # check needed params
     if ( !$ProjectID ) {
         return $LayoutObject->ErrorScreen(
-            Message => Translatable('ReportingProject: No Project for Ticket found.')
+            Message => Translatable('Reporting project: no project for ticket found.')
         );
     }
 
