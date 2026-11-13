@@ -77,4 +77,15 @@ div.MonthSelection {
     margin: 0px;
 }
 
+.MonthYear
+{
+    float: left;
+    margin: 2px 5px 0px 5px;
+}
+
+.RTL .MonthYear
+{
+    float: right;
+}
+
 } /* end @media */
