@@ -182,7 +182,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <a href="[% Env("Baselink") %]Action=[% Data.Link | html %]" target="_blank" class="" title="[% Translate("Ursprung") | html %]">[% Data.BaseModule | html %]</a>
+                                    <a href="[% Env("Baselink") %]Action=[% Data.Link | html %]" target="_blank" class="" title="[% Translate("Origin") | html %]">[% Data.BaseModule | html %]</a>
                                     <input type="hidden" name="TicketID[[% Data.ID | html %]]" value="[% Data.TicketID | html %]" />
                                     <input type="hidden" name="ArticleID[[% Data.ID | html %]]" value="[% Data.ArticleID | html %]" />
                                     <input type="hidden" name="BaseModule[[% Data.ID | html %]]" value="[% Data.BaseModule | html %]" />
