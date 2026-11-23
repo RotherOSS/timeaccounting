@@ -46,7 +46,6 @@ sub Data {
     $Self->{Translation}->{'Remark'} = 'Komen';
     $Self->{Translation}->{'Origin'} = '';
     $Self->{Translation}->{'Please add a remark with more than 8 characters!'} = 'Sila tambah komen dengan lebih daripada 8 karakter!';
-    $Self->{Translation}->{'Ursprung'} = '';
     $Self->{Translation}->{'Negative times are not allowed.'} = 'Waktu negatif tidak dibenarkan.';
     $Self->{Translation}->{'Repeated hours are not allowed. Start time matches another interval.'} =
         'Pengulangan jam adalah tidak dibenarkan. Masa mula padan dengan selang lain.';
@@ -224,13 +223,13 @@ sub Data {
     $Self->{Translation}->{'Confirm insert'} = 'Sahkan kemasukan';
 
     # SysConfig
-    $Self->{Translation}->{'Activate the synchronisation of Ticket-TimeUnits into the TimeAccounting module.'} =
+    $Self->{Translation}->{'Activate the synchronization of ticket time units into the time accounting module.'} =
         '';
     $Self->{Translation}->{'Agent interface notification module to see the number of incomplete working days for the user.'} =
         'Modul pemberitahuan antara muka ejen untuk melihat bilangan hari bekerja yang tidak lengkap untuk pengguna.';
-    $Self->{Translation}->{'Also synchronise customers as a new project if they have not yet been created in the customer database.'} =
+    $Self->{Translation}->{'Also synchronize customers as a new project if they have not yet been created in the customer database.'} =
         '';
-    $Self->{Translation}->{'As soon as the synchronisation of ticket TimeUnits is activated, it is possible to set the entries ReadOnly.'} =
+    $Self->{Translation}->{'As soon as the synchronization of ticket time units is activated, it is possible to set the entries read only.'} =
         '';
     $Self->{Translation}->{'Default name for new actions.'} = 'Nama lalai untuk tindakan baru.';
     $Self->{Translation}->{'Default name for new projects.'} = 'Nama lalai untuk projek baru.';
@@ -249,7 +248,7 @@ sub Data {
         'Menentukan jika modul statistik boleh menjana masa maklumat perakaunan.';
     $Self->{Translation}->{'Edit time accounting settings.'} = 'Sunting tetapan-tetapan perakaunan masa.';
     $Self->{Translation}->{'Edit time record.'} = 'Sunting rekod masa.';
-    $Self->{Translation}->{'Every time a agent add TimeUnits to a ticket, we sync the information to the timeaccounting module.'} =
+    $Self->{Translation}->{'Every time an agent adds time units to a ticket, we sync the information to the time accounting module.'} =
         '';
     $Self->{Translation}->{'For how many days ago you can insert working units.'} = 'Untuk berapa hari yang lalu, anda boleh memasukkan unit kerja.';
     $Self->{Translation}->{'If enabled, only users that has added working time to the selected project are shown.'} =
@@ -274,7 +273,7 @@ sub Data {
         'Ungkapan biasa untuk mengekang senarai projek mengikut kumpulan pengguna. Kunci mengandungi ungkapan biasa untuk projek (projek-projek), kandungan mengandungi koma senarai kumpulan dipisahkan.';
     $Self->{Translation}->{'Specifies if working hours can be inserted without start and end times.'} =
         'Menentukan jika waktu bekerja boleh dimasukkan tanpa permulaan dan akhir masa.';
-    $Self->{Translation}->{'Synchronise customers as a new project if they exists in the customer database.'} =
+    $Self->{Translation}->{'Synchronize customers as a new project if they exists in the customer database.'} =
         '';
     $Self->{Translation}->{'This module forces inserts in TimeAccounting.'} = 'Modul ini memaksa kemasukan dalam PerakaunanSemasa.';
     $Self->{Translation}->{'This notification module gives a warning if there are too many incomplete working days.'} =
@@ -288,13 +287,13 @@ sub Data {
     $Self->{Translation}->{'Time accounting.'} = 'Perakaunan semasa.';
     $Self->{Translation}->{'To use if some actions reduced the working hours (for example, if only half of the traveling time is paid Key => traveling; Content => 50).'} =
         'Untuk digunakan jika beberapa tindakan mengurangkan waktu kerja (contohnya, jika hanya separuh daripada masa perjalanan dibayar Kunci => perjalanan; Kandungan = > 50).';
-    $Self->{Translation}->{'Use Service as Action. Please add as key the timeacounting action and the service as value. RegEx are allowed.'} =
+    $Self->{Translation}->{'Use service as action. Please add as key the “timeacounting” action and the service as value. Regular expressions are allowed.'} =
         '';
-    $Self->{Translation}->{'We need to set a default action id when we sync TimeUnits to the TimeAccounting module.'} =
+    $Self->{Translation}->{'We need to set a default action ID when we sync time units to the time accounting module.'} =
         '';
-    $Self->{Translation}->{'We need to set a default project id when we sync TimeUnits to the TimeAccounting module.'} =
+    $Self->{Translation}->{'We need to set a default project ID when we sync time units to the time accounting module.'} =
         '';
-    $Self->{Translation}->{'We save the Article TimeUnit to a DynamicField from type "Article". Please add here the name of the field if the initinal name is changed.'} =
+    $Self->{Translation}->{'We save the article time unit to a dynamic field of type “Article”. Please add here the name of the field if the initial name is changed.'} =
         '';
 
 

@@ -46,7 +46,6 @@ sub Data {
     $Self->{Translation}->{'Remark'} = '';
     $Self->{Translation}->{'Origin'} = '';
     $Self->{Translation}->{'Please add a remark with more than 8 characters!'} = '';
-    $Self->{Translation}->{'Ursprung'} = '';
     $Self->{Translation}->{'Negative times are not allowed.'} = '';
     $Self->{Translation}->{'Repeated hours are not allowed. Start time matches another interval.'} =
         '';
@@ -224,13 +223,13 @@ sub Data {
     $Self->{Translation}->{'Confirm insert'} = '';
 
     # SysConfig
-    $Self->{Translation}->{'Activate the synchronisation of Ticket-TimeUnits into the TimeAccounting module.'} =
+    $Self->{Translation}->{'Activate the synchronization of ticket time units into the time accounting module.'} =
         '';
     $Self->{Translation}->{'Agent interface notification module to see the number of incomplete working days for the user.'} =
         'Модул за обавештавање у интерфејсу оператера који приказује број некомплетних радних дана за корисника.';
-    $Self->{Translation}->{'Also synchronise customers as a new project if they have not yet been created in the customer database.'} =
+    $Self->{Translation}->{'Also synchronize customers as a new project if they have not yet been created in the customer database.'} =
         '';
-    $Self->{Translation}->{'As soon as the synchronisation of ticket TimeUnits is activated, it is possible to set the entries ReadOnly.'} =
+    $Self->{Translation}->{'As soon as the synchronization of ticket time units is activated, it is possible to set the entries read only.'} =
         '';
     $Self->{Translation}->{'Default name for new actions.'} = 'Подразумевано име нових акција.';
     $Self->{Translation}->{'Default name for new projects.'} = 'Подразумевано име нових пројеката.';
@@ -249,7 +248,7 @@ sub Data {
         'Одређује да ли статистички модул може генерисати информације о обрачуну времена.';
     $Self->{Translation}->{'Edit time accounting settings.'} = 'Измени подешавања обрачунавања времена.';
     $Self->{Translation}->{'Edit time record.'} = 'Измени временски запис.';
-    $Self->{Translation}->{'Every time a agent add TimeUnits to a ticket, we sync the information to the timeaccounting module.'} =
+    $Self->{Translation}->{'Every time an agent adds time units to a ticket, we sync the information to the time accounting module.'} =
         '';
     $Self->{Translation}->{'For how many days ago you can insert working units.'} = 'За колико дана уназад можете унети радне јединице.';
     $Self->{Translation}->{'If enabled, only users that has added working time to the selected project are shown.'} =
@@ -274,7 +273,7 @@ sub Data {
         'Регуларни изрази за ограничавање листе акција према изабраним корисничким групама. Кључ садржи регуларни израз за пројект(е), у садржају је регуларни израз за групе.';
     $Self->{Translation}->{'Specifies if working hours can be inserted without start and end times.'} =
         'Одређује да ли радни сати могу да се унесу без времена почетка и завршетка.';
-    $Self->{Translation}->{'Synchronise customers as a new project if they exists in the customer database.'} =
+    $Self->{Translation}->{'Synchronize customers as a new project if they exists in the customer database.'} =
         '';
     $Self->{Translation}->{'This module forces inserts in TimeAccounting.'} = 'Овај модул намеће унос у обрачун времена.';
     $Self->{Translation}->{'This notification module gives a warning if there are too many incomplete working days.'} =
@@ -288,13 +287,13 @@ sub Data {
     $Self->{Translation}->{'Time accounting.'} = 'Обрачунавање времена.';
     $Self->{Translation}->{'To use if some actions reduced the working hours (for example, if only half of the traveling time is paid Key => traveling; Content => 50).'} =
         'За употребу ако неке акције смањују радне сате (на пример, ако се плаћа само пола времена путовања Кључ => путовање; Садржај => 50).';
-    $Self->{Translation}->{'Use Service as Action. Please add as key the timeacounting action and the service as value. RegEx are allowed.'} =
+    $Self->{Translation}->{'Use service as action. Please add as key the “timeacounting” action and the service as value. Regular expressions are allowed.'} =
         '';
-    $Self->{Translation}->{'We need to set a default action id when we sync TimeUnits to the TimeAccounting module.'} =
+    $Self->{Translation}->{'We need to set a default action ID when we sync time units to the time accounting module.'} =
         '';
-    $Self->{Translation}->{'We need to set a default project id when we sync TimeUnits to the TimeAccounting module.'} =
+    $Self->{Translation}->{'We need to set a default project ID when we sync time units to the time accounting module.'} =
         '';
-    $Self->{Translation}->{'We save the Article TimeUnit to a DynamicField from type "Article". Please add here the name of the field if the initinal name is changed.'} =
+    $Self->{Translation}->{'We save the article time unit to a dynamic field of type “Article”. Please add here the name of the field if the initial name is changed.'} =
         '';
 
 

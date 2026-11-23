@@ -46,7 +46,6 @@ sub Data {
     $Self->{Translation}->{'Remark'} = 'Észrevétel';
     $Self->{Translation}->{'Origin'} = '';
     $Self->{Translation}->{'Please add a remark with more than 8 characters!'} = 'Adjon hozzá egy 8 karakternél hosszabb észrevételt!';
-    $Self->{Translation}->{'Ursprung'} = '';
     $Self->{Translation}->{'Negative times are not allowed.'} = 'Negatív időpontok nem engedélyezettek.';
     $Self->{Translation}->{'Repeated hours are not allowed. Start time matches another interval.'} =
         'Az ismétlődő órák nem engedélyezettek. A kezdési idő egy másik időközre illeszkedik.';
@@ -224,13 +223,13 @@ sub Data {
     $Self->{Translation}->{'Confirm insert'} = 'Beillesztés megerősítése';
 
     # SysConfig
-    $Self->{Translation}->{'Activate the synchronisation of Ticket-TimeUnits into the TimeAccounting module.'} =
+    $Self->{Translation}->{'Activate the synchronization of ticket time units into the time accounting module.'} =
         '';
     $Self->{Translation}->{'Agent interface notification module to see the number of incomplete working days for the user.'} =
         'Ügyintézői felület értesítési modul a felhasználó befejezetlen munkanapjai számának megtekintéséhez.';
-    $Self->{Translation}->{'Also synchronise customers as a new project if they have not yet been created in the customer database.'} =
+    $Self->{Translation}->{'Also synchronize customers as a new project if they have not yet been created in the customer database.'} =
         '';
-    $Self->{Translation}->{'As soon as the synchronisation of ticket TimeUnits is activated, it is possible to set the entries ReadOnly.'} =
+    $Self->{Translation}->{'As soon as the synchronization of ticket time units is activated, it is possible to set the entries read only.'} =
         '';
     $Self->{Translation}->{'Default name for new actions.'} = 'Alapértelmezett név az új műveletekhez.';
     $Self->{Translation}->{'Default name for new projects.'} = 'Alapértelmezett név az új projektekhez.';
@@ -249,7 +248,7 @@ sub Data {
         'Meghatározza, hogy a statisztika modul előállíthat-e időelszámolási információkat.';
     $Self->{Translation}->{'Edit time accounting settings.'} = 'Időelszámolás beállításainak szerkesztése.';
     $Self->{Translation}->{'Edit time record.'} = 'Időfeljegyzés szerkesztése.';
-    $Self->{Translation}->{'Every time a agent add TimeUnits to a ticket, we sync the information to the timeaccounting module.'} =
+    $Self->{Translation}->{'Every time an agent adds time units to a ticket, we sync the information to the time accounting module.'} =
         '';
     $Self->{Translation}->{'For how many days ago you can insert working units.'} = 'Hány nappal ezelőtthöz illeszthet be munkaegységeket.';
     $Self->{Translation}->{'If enabled, only users that has added working time to the selected project are shown.'} =
@@ -274,7 +273,7 @@ sub Data {
         'Reguláris kifejezések a felhasználócsoportok szerinti korlátozó projekt listájához. A kulcs a projektekhez tartalmaz reguláris kifejezést, a tartalom pedig csoportok vesszővel elválasztott listáját tartalmazza.';
     $Self->{Translation}->{'Specifies if working hours can be inserted without start and end times.'} =
         'Megadja, hogy a munkaidő beszúrható-e kezdési és befejezési idők nélkül.';
-    $Self->{Translation}->{'Synchronise customers as a new project if they exists in the customer database.'} =
+    $Self->{Translation}->{'Synchronize customers as a new project if they exists in the customer database.'} =
         '';
     $Self->{Translation}->{'This module forces inserts in TimeAccounting.'} = 'Ez a modul kikényszeríti a beszúrásokat az időelszámolásban.';
     $Self->{Translation}->{'This notification module gives a warning if there are too many incomplete working days.'} =
@@ -288,13 +287,13 @@ sub Data {
     $Self->{Translation}->{'Time accounting.'} = 'Időelszámolás.';
     $Self->{Translation}->{'To use if some actions reduced the working hours (for example, if only half of the traveling time is paid Key => traveling; Content => 50).'} =
         'Akkor kell használni, ha néhány művelet csökkentette a munkaidőt (például ha csak az utazási idő fele van kifizetve: Kulcs => utazás; Tartalom => 50).';
-    $Self->{Translation}->{'Use Service as Action. Please add as key the timeacounting action and the service as value. RegEx are allowed.'} =
+    $Self->{Translation}->{'Use service as action. Please add as key the “timeacounting” action and the service as value. Regular expressions are allowed.'} =
         '';
-    $Self->{Translation}->{'We need to set a default action id when we sync TimeUnits to the TimeAccounting module.'} =
+    $Self->{Translation}->{'We need to set a default action ID when we sync time units to the time accounting module.'} =
         '';
-    $Self->{Translation}->{'We need to set a default project id when we sync TimeUnits to the TimeAccounting module.'} =
+    $Self->{Translation}->{'We need to set a default project ID when we sync time units to the time accounting module.'} =
         '';
-    $Self->{Translation}->{'We save the Article TimeUnit to a DynamicField from type "Article". Please add here the name of the field if the initinal name is changed.'} =
+    $Self->{Translation}->{'We save the article time unit to a dynamic field of type “Article”. Please add here the name of the field if the initial name is changed.'} =
         '';
 
 
