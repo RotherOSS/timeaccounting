@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TimeAccounting\n"
-"POT-Creation-Date: 2026-03-09 14:12+0000\n"
+"POT-Creation-Date: 2026-11-23 16:31+0000\n"
 "PO-Revision-Date: 2026-10-29 20:41+0000\n"
 "Last-Translator: Balázs Úr <balazs@urbalazs.hu>\n"
 "Language-Team: Hungarian <http://translate.otobo.org/projects/otobo-11-0/"
@@ -38,7 +38,9 @@ msgid "End time"
 msgstr "Befejezési idő"
 
 #. Template: AgentTicketAccountTime
-msgid "You must enter a start and an end time, or a positive period of up to 24 hours."
+msgid ""
+"You must enter a start and an end time, or a positive period of up to 24 "
+"hours."
 msgstr ""
 "Meg kell adnia egy kezdési és egy befejezési időt, vagy egy legfeljebb 24 "
 "órás pozitív időszakot."
@@ -110,10 +112,6 @@ msgstr "Eredet"
 #. Template: AgentTimeAccountingEdit
 msgid "Please add a remark with more than 8 characters!"
 msgstr "Adjon hozzá egy 8 karakternél hosszabb észrevételt!"
-
-#. Template: AgentTimeAccountingEdit
-msgid "Ursprung"
-msgstr "Eredet"
 
 #. Template: AgentTimeAccountingEdit
 msgid "Negative times are not allowed."
@@ -324,13 +322,17 @@ msgid "Go to reporting overview"
 msgstr "Ugrás a jelentés áttekintőhöz"
 
 #. Template: AgentTimeAccountingReportingProject
-msgid "Currently only active users in this project are shown. To change this behavior, please update setting:"
+msgid ""
+"Currently only active users in this project are shown. To change this "
+"behavior, please update setting:"
 msgstr ""
 "Jelenleg csak az aktív felhasználók vannak megjelenítve ebben a projektben. "
 "A működés módosításához frissítse a beállítást:"
 
 #. Template: AgentTimeAccountingReportingProject
-msgid "Currently all time accounting users are shown. To change this behavior, please update setting:"
+msgid ""
+"Currently all time accounting users are shown. To change this behavior, "
+"please update setting:"
 msgstr ""
 "Jelenleg minden időelszámoló felhasználó meg van jelenítve. A működés "
 "módosításához frissítse a beállítást:"
@@ -364,7 +366,8 @@ msgid "Edit Project Settings"
 msgstr "Projektbeállítások szerkesztése"
 
 #. Template: AgentTimeAccountingSetting
-msgid "There is already a project with this name. Please, choose a different one."
+msgid ""
+"There is already a project with this name. Please, choose a different one."
 msgstr "Már létezik egy ilyen nevű projekt. Válasszon egy másik nevet."
 
 #. Template: AgentTimeAccountingSetting
@@ -440,13 +443,16 @@ msgid "Allow time accounting skipping"
 msgstr "Időelszámolás kihagyásának lehetővé tétele"
 
 #. Template: AgentTimeAccountingSetting
-msgid "If this option is selected, time accounting is effectively optional for the user."
+msgid ""
+"If this option is selected, time accounting is effectively optional for the "
+"user."
 msgstr ""
 "Ha ez a lehetőség van kiválasztva, akkor az időelszámolás ténylegesen "
 "választható a felhasználónak."
 
 #. Template: AgentTimeAccountingSetting
-msgid "There will be no warnings about missing entries and no entry enforcement."
+msgid ""
+"There will be no warnings about missing entries and no entry enforcement."
 msgstr ""
 "Nem lesznek figyelmeztetések a hiányzó bejegyzésekről és nem lesz beírási "
 "kényszerítés."
@@ -541,14 +547,17 @@ msgstr "Legutóbbi projektek"
 
 #. Perl Module: Kernel/Modules/AgentTimeAccountingEdit.pm
 msgid "Can't save settings, because a day has only 24 hours!"
-msgstr "Nem lehet elmenteni a beállításokat, mert egy napnak csak 24 órája van!"
+msgstr ""
+"Nem lehet elmenteni a beállításokat, mert egy napnak csak 24 órája van!"
 
 #. Perl Module: Kernel/Modules/AgentTimeAccountingEdit.pm
 msgid "Can't delete Working Units!"
 msgstr "Nem lehet törölni a munkaegységeket!"
 
 #. Perl Module: Kernel/Modules/AgentTimeAccountingEdit.pm
-msgid "This Date is out of limit, but you haven't insert this day yet, so you get one(!) chance to insert"
+msgid ""
+"This Date is out of limit, but you haven't insert this day yet, so you get "
+"one(!) chance to insert"
 msgstr ""
 "Ez a dátum a határon kívül van, de még nem illesztette be ez a napot, így "
 "kap még egy(!) esélyt a beillesztésre"
@@ -574,13 +583,16 @@ msgid "Entered date was invalid! Date was changed to today."
 msgstr "A megadott dátum érvénytelen volt! A dátum a mai napra lett módosítva."
 
 #. Perl Module: Kernel/Modules/AgentTimeAccountingEdit.pm
-msgid "No time period configured, or the specified date is outside of the defined time periods."
+msgid ""
+"No time period configured, or the specified date is outside of the defined "
+"time periods."
 msgstr ""
 "Nincs időszak beállítva, vagy a megadott dátum a meghatározott időszakokon "
 "kívül van."
 
 #. Perl Module: Kernel/Modules/AgentTimeAccountingEdit.pm
-msgid "Please contact the time accounting administrator to update your time periods!"
+msgid ""
+"Please contact the time accounting administrator to update your time periods!"
 msgstr ""
 "Vegye fel a kapcsolatot az időelszámolás adminisztrátorával, hogy frissítse "
 "az időszakait!"
@@ -698,24 +710,44 @@ msgid "Confirm insert"
 msgstr "Beillesztés megerősítése"
 
 #. SysConfig
-msgid "Activate the synchronisation of Ticket-TimeUnits into the TimeAccounting module."
+#, fuzzy
+#| msgid ""
+#| "Activate the synchronisation of Ticket-TimeUnits into the TimeAccounting "
+#| "module."
+msgid ""
+"Activate the synchronization of ticket time units into the time accounting "
+"module."
 msgstr ""
 "A jegy időegységei szinkronizálásának aktiválása az időelszámolási modulba."
 
 #. SysConfig
-msgid "Agent interface notification module to see the number of incomplete working days for the user."
+msgid ""
+"Agent interface notification module to see the number of incomplete working "
+"days for the user."
 msgstr ""
 "Ügyintézői felület értesítési modul a felhasználó befejezetlen munkanapjai "
 "számának megtekintéséhez."
 
 #. SysConfig
-msgid "Also synchronise customers as a new project if they have not yet been created in the customer database."
+#, fuzzy
+#| msgid ""
+#| "Also synchronise customers as a new project if they have not yet been "
+#| "created in the customer database."
+msgid ""
+"Also synchronize customers as a new project if they have not yet been "
+"created in the customer database."
 msgstr ""
 "Szinkronizálja az ügyfeleket is új projektként, ha még nem lettek létrehozva "
 "az ügyféladatbázisban."
 
 #. SysConfig
-msgid "As soon as the synchronisation of ticket TimeUnits is activated, it is possible to set the entries ReadOnly."
+#, fuzzy
+#| msgid ""
+#| "As soon as the synchronisation of ticket TimeUnits is activated, it is "
+#| "possible to set the entries ReadOnly."
+msgid ""
+"As soon as the synchronization of ticket time units is activated, it is "
+"possible to set the entries read only."
 msgstr ""
 "Amint a jegy időegységeinek szinkronizálása aktiválásra kerül, lehetőség van "
 "a bejegyzések csak olvashatóként való beállítására."
@@ -769,14 +801,18 @@ msgid "Default status for new users."
 msgstr "Alapértelmezett állapot az új felhasználókhoz."
 
 #. SysConfig
-msgid "Defines the projects for which a remark is required. If the RegExp matches on the project, you have to insert a remark too. The RegExp use the smx parameter."
+msgid ""
+"Defines the projects for which a remark is required. If the RegExp matches "
+"on the project, you have to insert a remark too. The RegExp use the smx "
+"parameter."
 msgstr ""
 "Meghatározza azokat a projekteket, amelyekhez észrevétel szükséges. Ha a "
 "reguláris kifejezés illeszkedik a projektre, akkor be kell illesztenie egy "
 "észrevételt is. A reguláris kifejezés az smx paramétert használja."
 
 #. SysConfig
-msgid "Determines if the statistics module may generate time accounting information."
+msgid ""
+"Determines if the statistics module may generate time accounting information."
 msgstr ""
 "Meghatározza, hogy a statisztika modul előállíthat-e időelszámolási "
 "információkat."
@@ -790,7 +826,13 @@ msgid "Edit time record."
 msgstr "Időfeljegyzés szerkesztése."
 
 #. SysConfig
-msgid "Every time a agent add TimeUnits to a ticket, we sync the information to the timeaccounting module."
+#, fuzzy
+#| msgid ""
+#| "Every time a agent add TimeUnits to a ticket, we sync the information to "
+#| "the timeaccounting module."
+msgid ""
+"Every time an agent adds time units to a ticket, we sync the information to "
+"the time accounting module."
 msgstr ""
 "Valahányszor egy ügyintéző időegységeket ad hozzá egy jegyhez, "
 "szinkronizáljuk az információkat az időelszámolási modullal."
@@ -800,44 +842,60 @@ msgid "For how many days ago you can insert working units."
 msgstr "Hány nappal ezelőtthöz illeszthet be munkaegységeket."
 
 #. SysConfig
-msgid "If enabled, only users that has added working time to the selected project are shown."
+msgid ""
+"If enabled, only users that has added working time to the selected project "
+"are shown."
 msgstr ""
 "Ha engedélyezve van, akkor csak azok a felhasználók lesznek megjelenítve, "
 "akik munkaidőt adtak hozzá a kijelölt projekthez."
 
 #. SysConfig
-msgid "If enabled, the dropdown elements in the edit screen are changed to modernized autocompletion fields."
+msgid ""
+"If enabled, the dropdown elements in the edit screen are changed to "
+"modernized autocompletion fields."
 msgstr ""
 "Ha engedélyezve van, akkor a szerkesztési képernyőn lévő lenyíló elemek "
 "korszerűsített automatikusan kiegészített mezőkre lesznek megváltoztatva."
 
 #. SysConfig
-msgid "If enabled, the filter for the previous projects can be used instead two list of projects (last and all ones). It could be used only if TimeAccounting::EnableAutoCompletion is enabled."
+msgid ""
+"If enabled, the filter for the previous projects can be used instead two "
+"list of projects (last and all ones). It could be used only if "
+"TimeAccounting::EnableAutoCompletion is enabled."
 msgstr ""
 "Ha engedélyezve van, akkor az előző projektek szűrője használható a "
 "projektek két listája helyett (legutóbbi és összes). Csak akkor használható, "
 "ha a TimeAccounting::EnableAutoCompletion engedélyezve van."
 
 #. SysConfig
-msgid "If enabled, the filter for the previous projects is active by default if there are the previous projects. It could be used only if EnableAutoCompletion and TimeAccounting::UseFilter are enabled."
+msgid ""
+"If enabled, the filter for the previous projects is active by default if "
+"there are the previous projects. It could be used only if "
+"EnableAutoCompletion and TimeAccounting::UseFilter are enabled."
 msgstr ""
 "Ha engedélyezve van, akkor az előző projektek szűrője alapértelmezetten be "
 "van kapcsolva, ha vannak előző projektek. Csak akkor használható, ha az "
 "EnableAutoCompletion és a TimeAccounting::UseFilter engedélyezve van."
 
 #. SysConfig
-msgid "If enabled, the user is allowed to enter \"on vacation leave\", \"on sick leave\" and \"on overtime leave\" to multiple dates at once."
+msgid ""
+"If enabled, the user is allowed to enter \"on vacation leave\", \"on sick "
+"leave\" and \"on overtime leave\" to multiple dates at once."
 msgstr ""
 "Ha engedélyezve van, akkor a felhasználónak megengedett egyszerre több "
 "dátumhoz „szabadságon”, „betegszabadságon” és „csúsztatáson” érték megadása."
 
 #. SysConfig
-msgid "Maximum number of working days after which the working units have to be inserted."
+msgid ""
+"Maximum number of working days after which the working units have to be "
+"inserted."
 msgstr ""
 "A munkanapok legnagyobb száma, amelyek után a munkaegységeket be kell szúrni."
 
 #. SysConfig
-msgid "Maximum number of working days without working units entry after which a warning will be shown."
+msgid ""
+"Maximum number of working days without working units entry after which a "
+"warning will be shown."
 msgstr ""
 "A munkaegységek bejegyzés nélküli munkanapok legnagyobb száma, amelyek után "
 "egy figyelmeztetés lesz megjelenítve."
@@ -851,14 +909,20 @@ msgid "Project time reporting."
 msgstr "Projektidő jelentés."
 
 #. SysConfig
-msgid "Regular expressions for constraining action list according to selected project. Key contains regular expression for project(s), content contains regular expressions for action(s)."
+msgid ""
+"Regular expressions for constraining action list according to selected "
+"project. Key contains regular expression for project(s), content contains "
+"regular expressions for action(s)."
 msgstr ""
 "Reguláris kifejezések a kijelölt projekt szerinti korlátozó művelet "
 "listájához. A kulcs a projektekhez tartalmaz reguláris kifejezést, a "
 "tartalom pedig a műveletekhez."
 
 #. SysConfig
-msgid "Regular expressions for constraining project list according to user groups. Key contains regular expression for project(s), content contains comma separated list of groups."
+msgid ""
+"Regular expressions for constraining project list according to user groups. "
+"Key contains regular expression for project(s), content contains comma "
+"separated list of groups."
 msgstr ""
 "Reguláris kifejezések a felhasználócsoportok szerinti korlátozó projekt "
 "listájához. A kulcs a projektekhez tartalmaz reguláris kifejezést, a "
@@ -874,7 +938,13 @@ msgstr ""
 "Megadja, hogy a munkaidő beszúrható-e kezdési és befejezési idők nélkül."
 
 #. SysConfig
-msgid "Synchronise customers as a new project if they exists in the customer database."
+#, fuzzy
+#| msgid ""
+#| "Synchronise customers as a new project if they exists in the customer "
+#| "database."
+msgid ""
+"Synchronize customers as a new project if they exists in the customer "
+"database."
 msgstr ""
 "Ügyfelek szinkronizálása új projektként, ha léteznek az ügyféladatbázisban."
 
@@ -883,7 +953,9 @@ msgid "This module forces inserts in TimeAccounting."
 msgstr "Ez a modul kikényszeríti a beszúrásokat az időelszámolásban."
 
 #. SysConfig
-msgid "This notification module gives a warning if there are too many incomplete working days."
+msgid ""
+"This notification module gives a warning if there are too many incomplete "
+"working days."
 msgstr ""
 "Ez az értesítési modul egy figyelmeztetést ad, ha túl sok befejezetlen "
 "munkanap található."
@@ -929,32 +1001,61 @@ msgid "Time accounting."
 msgstr "Időelszámolás."
 
 #. SysConfig
-msgid "To use if some actions reduced the working hours (for example, if only half of the traveling time is paid Key => traveling; Content => 50)."
+msgid ""
+"To use if some actions reduced the working hours (for example, if only half "
+"of the traveling time is paid Key => traveling; Content => 50)."
 msgstr ""
 "Akkor kell használni, ha néhány művelet csökkentette a munkaidőt (például ha "
 "csak az utazási idő fele van kifizetve: Kulcs => utazás; Tartalom => 50)."
 
 #. SysConfig
-msgid "Use Service as Action. Please add as key the timeacounting action and the service as value. RegEx are allowed."
+#, fuzzy
+#| msgid ""
+#| "Use Service as Action. Please add as key the timeacounting action and the "
+#| "service as value. RegEx are allowed."
+msgid ""
+"Use service as action. Please add as key the “timeacounting” action and the "
+"service as value. Regular expressions are allowed."
 msgstr ""
 "Szolgáltatás használata műveletként. Adja hozzá a „timeacounting” műveletet "
 "kulcsként, a szolgáltatást pedig értékként. Reguláris kifejezések is "
 "megengedettek."
 
 #. SysConfig
-msgid "We need to set a default action id when we sync TimeUnits to the TimeAccounting module."
+#, fuzzy
+#| msgid ""
+#| "We need to set a default action id when we sync TimeUnits to the "
+#| "TimeAccounting module."
+msgid ""
+"We need to set a default action ID when we sync time units to the time "
+"accounting module."
 msgstr ""
 "Be kell állítanunk egy alapértelmezett műveletazonosítót, ha időegységeket "
 "szinkronizálunk az időelszámolási modulba."
 
 #. SysConfig
-msgid "We need to set a default project id when we sync TimeUnits to the TimeAccounting module."
+#, fuzzy
+#| msgid ""
+#| "We need to set a default project id when we sync TimeUnits to the "
+#| "TimeAccounting module."
+msgid ""
+"We need to set a default project ID when we sync time units to the time "
+"accounting module."
 msgstr ""
 "Be kell állítanunk egy alapértelmezett projektazonosítót, ha időegységeket "
 "szinkronizálunk az időelszámolási modulba."
 
 #. SysConfig
-msgid "We save the Article TimeUnit to a DynamicField from type \"Article\". Please add here the name of the field if the initinal name is changed."
+#, fuzzy
+#| msgid ""
+#| "We save the Article TimeUnit to a DynamicField from type \"Article\". "
+#| "Please add here the name of the field if the initinal name is changed."
+msgid ""
+"We save the article time unit to a dynamic field of type “Article”. Please "
+"add here the name of the field if the initial name is changed."
 msgstr ""
 "Elmentjük a bejegyzés időegységét egy „bejegyzés” típusú dinamikus mezőbe. "
 "Itt adja hozzá a mező nevét, ha a kezdeti név megváltozott."
+
+#~ msgid "Ursprung"
+#~ msgstr "Eredet"
