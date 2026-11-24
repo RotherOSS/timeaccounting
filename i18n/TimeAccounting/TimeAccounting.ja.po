@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TimeAccounting\n"
-"POT-Creation-Date: 2026-03-09 14:12+0000\n"
+"POT-Creation-Date: 2026-11-23 16:43+0000\n"
 "PO-Revision-Date: 2026-10-05 07:41+0000\n"
 "Last-Translator: Kozo Sakurai <sakurai@io-architect.com>\n"
 "Language-Team: Japanese <http://translate.otobo.org/projects/otobo-11-1/"
@@ -41,7 +41,8 @@ msgstr "終了時刻"
 msgid ""
 "You must enter a start and an end time, or a positive period of up to 24 "
 "hours."
-msgstr "開始時刻と終了時刻、または24時間以内の正の期間を入力する必要があります。"
+msgstr ""
+"開始時刻と終了時刻、または24時間以内の正の期間を入力する必要があります。"
 
 #. Template: AgentTicketAccountTime
 msgid "The time period must be given in hours and can be a decimal number."
@@ -110,10 +111,6 @@ msgstr "発生元"
 #. Template: AgentTimeAccountingEdit
 msgid "Please add a remark with more than 8 characters!"
 msgstr "8文字以上の注釈を追加してください。"
-
-#. Template: AgentTimeAccountingEdit
-msgid "Ursprung"
-msgstr "発生元"
 
 #. Template: AgentTimeAccountingEdit
 msgid "Negative times are not allowed."
@@ -614,11 +611,15 @@ msgid "Reporting"
 msgstr "報告する"
 
 #. Perl Module: Kernel/Modules/AgentTimeAccountingReportingTicket.pm
-msgid "ReportingProject: Need TicketID"
+#, fuzzy
+#| msgid "ReportingProject: Need TicketID"
+msgid "Reporting project: need ticket ID."
 msgstr "ReportingProject: TicketID が必要です"
 
 #. Perl Module: Kernel/Modules/AgentTimeAccountingReportingTicket.pm
-msgid "ReportingProject: No Project for Ticket found."
+#, fuzzy
+#| msgid "ReportingProject: No Project for Ticket found."
+msgid "Reporting project: no project for ticket found."
 msgstr "ReportingProject: チケットのプロジェクトが見つかりません。"
 
 #. Perl Module: Kernel/Modules/AgentTimeAccountingSetting.pm
@@ -706,8 +707,12 @@ msgid "Confirm insert"
 msgstr "挿入の確認"
 
 #. SysConfig
+#, fuzzy
+#| msgid ""
+#| "Activate the synchronisation of Ticket-TimeUnits into the TimeAccounting "
+#| "module."
 msgid ""
-"Activate the synchronisation of Ticket-TimeUnits into the TimeAccounting "
+"Activate the synchronization of ticket time units into the time accounting "
 "module."
 msgstr ""
 "チケットの作業時間（TimeUnits）を TimeAccounting モジュールに同期する機能を有"
@@ -722,17 +727,25 @@ msgstr ""
 "す。"
 
 #. SysConfig
+#, fuzzy
+#| msgid ""
+#| "Also synchronise customers as a new project if they have not yet been "
+#| "created in the customer database."
 msgid ""
-"Also synchronise customers as a new project if they have not yet been "
+"Also synchronize customers as a new project if they have not yet been "
 "created in the customer database."
 msgstr ""
 "顧客データベースにまだ作成されていない顧客も、新しいプロジェクトとして同期し"
 "ます。"
 
 #. SysConfig
+#, fuzzy
+#| msgid ""
+#| "As soon as the synchronisation of ticket TimeUnits is activated, it is "
+#| "possible to set the entries ReadOnly."
 msgid ""
-"As soon as the synchronisation of ticket TimeUnits is activated, it is "
-"possible to set the entries ReadOnly."
+"As soon as the synchronization of ticket time units is activated, it is "
+"possible to set the entries read only."
 msgstr ""
 "チケットの作業時間の同期を有効にすると、エントリーを読み取り専用（ReadOnly）"
 "に設定できます。"
@@ -809,12 +822,16 @@ msgid "Edit time record."
 msgstr "タイムレコードを編集"
 
 #. SysConfig
+#, fuzzy
+#| msgid ""
+#| "Every time a agent add TimeUnits to a ticket, we sync the information to "
+#| "the timeaccounting module."
 msgid ""
-"Every time a agent add TimeUnits to a ticket, we sync the information to the "
-"timeaccounting module."
+"Every time an agent adds time units to a ticket, we sync the information to "
+"the time accounting module."
 msgstr ""
-"担当者がチケットに作業時間を追加するたびに、その情報を TimeAccounting "
-"モジュールに同期します。"
+"担当者がチケットに作業時間を追加するたびに、その情報を TimeAccounting モ"
+"ジュールに同期します。"
 
 #. SysConfig
 msgid "For how many days ago you can insert working units."
@@ -914,8 +931,12 @@ msgstr ""
 "る。"
 
 #. SysConfig
+#, fuzzy
+#| msgid ""
+#| "Synchronise customers as a new project if they exists in the customer "
+#| "database."
 msgid ""
-"Synchronise customers as a new project if they exists in the customer "
+"Synchronize customers as a new project if they exists in the customer "
 "database."
 msgstr "顧客データベースに存在する顧客を、新しいプロジェクトとして同期します。"
 
@@ -981,34 +1002,53 @@ msgstr ""
 "に`journey`、「内容」に`50`と設定)"
 
 #. SysConfig
+#, fuzzy
+#| msgid ""
+#| "Use Service as Action. Please add as key the timeacounting action and the "
+#| "service as value. RegEx are allowed."
 msgid ""
-"Use Service as Action. Please add as key the timeacounting action and the "
-"service as value. RegEx are allowed."
+"Use service as action. Please add as key the “timeacounting” action and the "
+"service as value. Regular expressions are allowed."
 msgstr ""
 "サービスをアクションとして使用します。キーに TimeAccounting のアクション、値"
 "にサービスを追加してください。正規表現を使用できます。"
 
 #. SysConfig
+#, fuzzy
+#| msgid ""
+#| "We need to set a default action id when we sync TimeUnits to the "
+#| "TimeAccounting module."
 msgid ""
-"We need to set a default action id when we sync TimeUnits to the "
-"TimeAccounting module."
+"We need to set a default action ID when we sync time units to the time "
+"accounting module."
 msgstr ""
 "作業時間を TimeAccounting モジュールに同期する際のデフォルトのアクションIDを"
 "設定する必要があります。"
 
 #. SysConfig
+#, fuzzy
+#| msgid ""
+#| "We need to set a default project id when we sync TimeUnits to the "
+#| "TimeAccounting module."
 msgid ""
-"We need to set a default project id when we sync TimeUnits to the "
-"TimeAccounting module."
+"We need to set a default project ID when we sync time units to the time "
+"accounting module."
 msgstr ""
 "作業時間を TimeAccounting モジュールに同期する際のデフォルトのプロジェクトID"
 "を設定する必要があります。"
 
 #. SysConfig
+#, fuzzy
+#| msgid ""
+#| "We save the Article TimeUnit to a DynamicField from type \"Article\". "
+#| "Please add here the name of the field if the initinal name is changed."
 msgid ""
-"We save the Article TimeUnit to a DynamicField from type \"Article\". Please "
-"add here the name of the field if the initinal name is changed."
+"We save the article time unit to a dynamic field of type “Article”. Please "
+"add here the name of the field if the initial name is changed."
 msgstr ""
 "記事の作業時間は、タイプ \"Article\" のダイナミックフィールドに保存されます。"
-"初期のフィールド名を変更した場合は、ここにそのフィールド名を入力してください"
-"。"
+"初期のフィールド名を変更した場合は、ここにそのフィールド名を入力してくださ"
+"い。"
+
+#~ msgid "Ursprung"
+#~ msgstr "発生元"

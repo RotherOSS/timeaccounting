@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TimeAccounting\n"
-"POT-Creation-Date: 2026-03-09 14:12+0000\n"
+"POT-Creation-Date: 2026-11-23 16:43+0000\n"
 "PO-Revision-Date: 2026-10-21 14:41+0000\n"
 "Last-Translator: Balázs Úr <balazs@urbalazs.hu>\n"
 "Language-Team: Hungarian <http://translate.otobo.org/projects/otobo-11-1/"
@@ -112,10 +112,6 @@ msgstr "Eredet"
 #. Template: AgentTimeAccountingEdit
 msgid "Please add a remark with more than 8 characters!"
 msgstr "Adjon hozzá egy 8 karakternél hosszabb észrevételt!"
-
-#. Template: AgentTimeAccountingEdit
-msgid "Ursprung"
-msgstr "Eredet"
 
 #. Template: AgentTimeAccountingEdit
 msgid "Negative times are not allowed."
@@ -551,7 +547,8 @@ msgstr "Legutóbbi projektek"
 
 #. Perl Module: Kernel/Modules/AgentTimeAccountingEdit.pm
 msgid "Can't save settings, because a day has only 24 hours!"
-msgstr "Nem lehet elmenteni a beállításokat, mert egy napnak csak 24 órája van!"
+msgstr ""
+"Nem lehet elmenteni a beállításokat, mert egy napnak csak 24 órája van!"
 
 #. Perl Module: Kernel/Modules/AgentTimeAccountingEdit.pm
 msgid "Can't delete Working Units!"
@@ -621,11 +618,15 @@ msgid "Reporting"
 msgstr "Jelentéskészítés"
 
 #. Perl Module: Kernel/Modules/AgentTimeAccountingReportingTicket.pm
-msgid "ReportingProject: Need TicketID"
+#, fuzzy
+#| msgid "ReportingProject: Need TicketID"
+msgid "Reporting project: need ticket ID."
 msgstr "Jelentéskészítési projekt: jegyazonosító szükséges"
 
 #. Perl Module: Kernel/Modules/AgentTimeAccountingReportingTicket.pm
-msgid "ReportingProject: No Project for Ticket found."
+#, fuzzy
+#| msgid "ReportingProject: No Project for Ticket found."
+msgid "Reporting project: no project for ticket found."
 msgstr "Jelentéskészítési projekt: nem található projekt a jegyhez."
 
 #. Perl Module: Kernel/Modules/AgentTimeAccountingSetting.pm
@@ -713,8 +714,12 @@ msgid "Confirm insert"
 msgstr "Beillesztés megerősítése"
 
 #. SysConfig
+#, fuzzy
+#| msgid ""
+#| "Activate the synchronisation of Ticket-TimeUnits into the TimeAccounting "
+#| "module."
 msgid ""
-"Activate the synchronisation of Ticket-TimeUnits into the TimeAccounting "
+"Activate the synchronization of ticket time units into the time accounting "
 "module."
 msgstr ""
 "A jegy időegységei szinkronizálásának aktiválása az időelszámolási modulba."
@@ -728,17 +733,25 @@ msgstr ""
 "számának megtekintéséhez."
 
 #. SysConfig
+#, fuzzy
+#| msgid ""
+#| "Also synchronise customers as a new project if they have not yet been "
+#| "created in the customer database."
 msgid ""
-"Also synchronise customers as a new project if they have not yet been "
+"Also synchronize customers as a new project if they have not yet been "
 "created in the customer database."
 msgstr ""
 "Szinkronizálja az ügyfeleket is új projektként, ha még nem lettek létrehozva "
 "az ügyféladatbázisban."
 
 #. SysConfig
+#, fuzzy
+#| msgid ""
+#| "As soon as the synchronisation of ticket TimeUnits is activated, it is "
+#| "possible to set the entries ReadOnly."
 msgid ""
-"As soon as the synchronisation of ticket TimeUnits is activated, it is "
-"possible to set the entries ReadOnly."
+"As soon as the synchronization of ticket time units is activated, it is "
+"possible to set the entries read only."
 msgstr ""
 "Amint a jegy időegységeinek szinkronizálása aktiválásra kerül, lehetőség van "
 "a bejegyzések csak olvashatóként való beállítására."
@@ -817,9 +830,13 @@ msgid "Edit time record."
 msgstr "Időfeljegyzés szerkesztése."
 
 #. SysConfig
+#, fuzzy
+#| msgid ""
+#| "Every time a agent add TimeUnits to a ticket, we sync the information to "
+#| "the timeaccounting module."
 msgid ""
-"Every time a agent add TimeUnits to a ticket, we sync the information to the "
-"timeaccounting module."
+"Every time an agent adds time units to a ticket, we sync the information to "
+"the time accounting module."
 msgstr ""
 "Valahányszor egy ügyintéző időegységeket ad hozzá egy jegyhez, "
 "szinkronizáljuk az információkat az időelszámolási modullal."
@@ -925,8 +942,12 @@ msgstr ""
 "Megadja, hogy a munkaidő beszúrható-e kezdési és befejezési idők nélkül."
 
 #. SysConfig
+#, fuzzy
+#| msgid ""
+#| "Synchronise customers as a new project if they exists in the customer "
+#| "database."
 msgid ""
-"Synchronise customers as a new project if they exists in the customer "
+"Synchronize customers as a new project if they exists in the customer "
 "database."
 msgstr ""
 "Ügyfelek szinkronizálása új projektként, ha léteznek az ügyféladatbázisban."
@@ -992,34 +1013,53 @@ msgstr ""
 "csak az utazási idő fele van kifizetve: Kulcs => utazás; Tartalom => 50)."
 
 #. SysConfig
+#, fuzzy
+#| msgid ""
+#| "Use Service as Action. Please add as key the timeacounting action and the "
+#| "service as value. RegEx are allowed."
 msgid ""
-"Use Service as Action. Please add as key the timeacounting action and the "
-"service as value. RegEx are allowed."
+"Use service as action. Please add as key the “timeacounting” action and the "
+"service as value. Regular expressions are allowed."
 msgstr ""
 "Szolgáltatás használata műveletként. Adja hozzá a „timeacounting” műveletet "
 "kulcsként, a szolgáltatást pedig értékként. Reguláris kifejezések is "
 "megengedettek."
 
 #. SysConfig
+#, fuzzy
+#| msgid ""
+#| "We need to set a default action id when we sync TimeUnits to the "
+#| "TimeAccounting module."
 msgid ""
-"We need to set a default action id when we sync TimeUnits to the "
-"TimeAccounting module."
+"We need to set a default action ID when we sync time units to the time "
+"accounting module."
 msgstr ""
 "Be kell állítanunk egy alapértelmezett műveletazonosítót, ha időegységeket "
 "szinkronizálunk az időelszámolási modulba."
 
 #. SysConfig
+#, fuzzy
+#| msgid ""
+#| "We need to set a default project id when we sync TimeUnits to the "
+#| "TimeAccounting module."
 msgid ""
-"We need to set a default project id when we sync TimeUnits to the "
-"TimeAccounting module."
+"We need to set a default project ID when we sync time units to the time "
+"accounting module."
 msgstr ""
 "Be kell állítanunk egy alapértelmezett projektazonosítót, ha időegységeket "
 "szinkronizálunk az időelszámolási modulba."
 
 #. SysConfig
+#, fuzzy
+#| msgid ""
+#| "We save the Article TimeUnit to a DynamicField from type \"Article\". "
+#| "Please add here the name of the field if the initinal name is changed."
 msgid ""
-"We save the Article TimeUnit to a DynamicField from type \"Article\". Please "
-"add here the name of the field if the initinal name is changed."
+"We save the article time unit to a dynamic field of type “Article”. Please "
+"add here the name of the field if the initial name is changed."
 msgstr ""
 "Elmentjük a bejegyzés időegységét egy „bejegyzés” típusú dinamikus mezőbe. "
 "Itt adja hozzá a mező nevét, ha a kezdeti név megváltozott."
+
+#~ msgid "Ursprung"
+#~ msgstr "Eredet"
